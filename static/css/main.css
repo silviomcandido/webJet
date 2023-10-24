@@ -1308,12 +1308,6 @@ input, select, textarea {
 				margin: 0 auto; /* Center the image horizontally */
 			}
 			
-			/* Specific styles for mobile screens */
-			@media (max-width: 768px) {
-				#header .logo img {
-					max-width: 50vw; /* Allow the image to take up to 100% of the viewport width on small screens */
-				}
-			}
 
 			#header .logo .icon:before {
 				font-size: 2rem;
