@@ -1,449 +1,78 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>EHD JETS</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../static/css/main.css" />
-		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
-		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes on Computational Fluid Dynamics: General Principles</title>
+	<link rel="stylesheet" href="../static/styles.css">
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<header>
+  <div class="header-container">
+    <div class="title-block">
+    <h1>Estudo da Atomização de Jatos Eletrohidrodinâmicos</h1>
+    <h3> Modelação, Desempenho e Aplicações</h3>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#openfoam">OpenFOAM</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							 <img src="../static/images/LOGOS.png" >
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Atomização de Jatos Eletro-hidrodinamicos</h1>
-								<h3>Modelação, Desempenho e Aplicações</h3>
-								<p>Um estudo numérico desenvolvido por <a href="https://silviomcandido.github.io">Sílvio Cândido</a>, sobre a orientação de 
-									<a href="https://www.ubi.pt/Pessoa/pascoa">José C. Páscoa</a> <br />
-									trabalho suportado pela Bolsa nº 2020.04517.BD da <a href="https://www.fct.pt">Fundação para a Ciência e Tecnologia</a> <br />
-									e apoiado pelo <a href="https://www.ubi.pt/entidade/C-MAST">Center for Mechanical and Aerospace Science and Technologies</a> .</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Introdução</a></li>
-								<li><a href="#work">Fundamentos</a></li>
-								<li><a href="#work">Modelação</a></li>
-								<li><a href="#about">Desempenho</a></li>
-								<li><a href="#ML">Aplicações</a></li>
-								<li><a href="#about">Conclusões</a></li>
-								<li><a href="#about">About</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+<div >
+  <span>
+    <img src="../static/images/s119.png" alt="Descriptive text about the image" class="full-width"></span>
+</div>
+  
+  <div style="text-align: justify;"> 
+    <p>Um estudo numérico desenvolvido por <a href="https://silviomcandido.github.io">Sílvio Cândido</a>, sobre a orientação de <a href="https://www.ubi.pt/Pessoa/pascoa">José C. Páscoa</a> trabalho suportado pela Bolsa nº 2020.04517.BD da <a href="https://www.fct.pt">Fundação para a Ciência e Tecnologia</a> e apoiado pelo <a href="https://www.ubi.pt/entidade/C-MAST">Center for Mechanical and Aerospace Science and Technologies</a>.</p>
+</div>
 
-				<!-- Main -->
-					<div id="main">
+		
+<div class="container">
+    <!-- Left Section -->
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="../static/images/s119.png" alt="" /></span>
-								<p> Os jatos eletrohidrodinâmicos (EHD) são criados, na sua forma mais simples, através de um pequeno bocal, no qual emerge uma gota de líquido com certas propriedades elétricas, ao qual é aplicada uma alta tensão. Esta tensão é aplicada entre o bocal e um coletor, sendo então possível formar um jato fino devido à ação electroestática e, eventualmente, também à de origem gravítica. Este fenómeno é comummente referenciado como "cone de Taylor". Os cones de Taylor têm distintos modos de funcionamento, sendo que são estudados consoante as diferentes formas de operação. O modo de funcionamento mais comum é o de jato contínuo, entre o cone e o coletor, contudo, e dependendo das condições ideais, estes jatos podem quebrar-se em pequenas gotas, veja-se a Figura 1.</p>
+    <div class="left-section">
+        <div>About the Book</div>
 
 
-								<p>Os jatos eletro-hidrodinâmicos (EHD) por cone de Taylor são uma manifestação fascinante da interação entre forças eletrostáticas e tensões superficiais em fluidos condutivos. Este fenômeno tem sido objeto de extensa pesquisa devido às suas aplicações potenciais em áreas como impressão a jato de tinta, produção de nanofibras e entrega de medicamentos. Os diversos modos de funcionamento dos jatos EHD, sob diferentes condições experimentais, são descritos abaixo:<p>
+    </div>
 
-									<div style="width: 100%; background-color: rgb(236, 236, 236); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
-										<img src="../static/images/modos.png" alt="Sua Imagem" style="width: 600px; float: right; margin-right: 20px;">
-										<ul>
-											<li>Dripping: </li>
+    <!-- Right Section -->
+    <div class="right-section">
+        <div>Contents</div>
+        <ul>
+            <li><a href="preface.html">Preface</a></li>
+			<li><a href="intro.html">1. Introdução </a></li>
+            <li><a href="cap2.html">2. Fundamentos EHD</a></li>
+            <li><a href="cap3.html">3. Modelação Numérica</a></li>
+            <li><a href="cap3.html">4. Desempenho</a></li>
+            <li><a href="cap3.html">5. Métodos Avançados para Análise e Otimizição</a></li>
+            <li><a href="cap3.html">6. Aplicações</a></li>
+            <li><a href="cap3.html">Apendice A - Validação</a></li>
+            <li><a href="cap3.html">Apendice B - Deploy</a></li>
+            <!-- Other links to sections -->
+            ...
+        </ul>
+        <!-- Additional sections can be added similarly -->
+    </div>
+</div>
+<footer>
+    <div class="logo">
+        <img src="./images/LOGOS.png" alt="CFD Direct">
+      </div>
+    <div class="footer-left">
+        Copyright © 2019-2023 S. Cândido & UBI
+    </div>
+</footer>
 
-											<p>Uma gota cresce na extremidade do capilar até que a gravidade faça cair. Este modo é evidente na imagem inferior central. Neste modo, o líquido pendura da agulha ou capilar, formando uma gota pendente que eventualmente se desprende devido à gravidade. A gota cresce até um certo tamanho, após o qual a tensão superficial não consegue mais sustentar a gota, levando-a a cair. A imagem mostra claramente este momento de "quebra" com a legenda "Quebra em Dripping".<p>
-											
-										<li> Microdripping: </li>
-										
-											<p>Pequenas gotas são periodicamente emitidas do ápice do cone com efeitos significativos de forças eletrostáticas. Aqui a contribuição da força eletrostática é pequena e a formação do cone de Taylor é periódica;</p>
-
-										<li> Jato Estável com Cone de Taylor: </li>
-	
-										<p>Forma-se um cone na extremidade do capilar de onde é emitido um jato contínuo e estável. Na imagem superior direita, observamos um jato contínuo que sai da ponta da agulha. Antes da emissão do jato, o líquido forma um "cone de Taylor" na ponta da agulha, um formato cónico característico formado quando o líquido é submetido a um campo elétrico forte. O jato é emitido da ponta afiada do cone. O jato é contínuo e estável.</p>
-										
-										<li>Spinning: </li>
-	
-										<p>Este modo não foi possível visualizar mas a solução é ejetada tangencial mente à superfície do cone através de ondas periódicas. Este modo é usual quando são usadas soluções viscosas ou polímeros; </p>
-										
-										<li> Multi-jato: </li>
-	
-										<p>Este modo não é claramente visível na imagem fornecida, mas geralmente envolve a emissão de múltiplos jatos finos a partir de uma superfície líquida ou a formação de vários cones de Taylor em proximidade. Em determinadas condições, a superfície do líquido pode se tornar instável, levando à formação de múltiplos jatos</p>
-										</ul>
-									</div>
-								
-
-							
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="../static/images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
-
-						<!-- ML -->
-						<article id="ML">
-							<h2 class="major">ML</h2>
-							<div style="display: flex;">
-								<div style="flex: 1; padding: 30px;">
-								  <h2>Control parameters</h2>
-								  <form method="post" action="{{ url_for('predict') }}">
-									<div>
-									  <label class="input-label" for="inlet_flow_rate">Inlet Flow Rate:</label>
-									  <input  style="color: black;" type="number" id="inlet_flow_rate" name="inlet_flow_rate" value="{{ inlet_flow_rate }}" >
-									</div>
-									<div>
-									  <label class="input-label" for="electric_potential">Electric Potential:</label>
-									  <input style="color: black;" type="number" id="electric_potential" name="electric_potential" value="{{ electric_potential }}" >
-									</div>
-									<div>
-									  <label class="input-label" for="nozzle_size">Nozzle Size:</label>
-									  <input style="color: black;" type="number" id="nozzle_size" name="nozzle_size" value="{{ nozzle_size }}" >
-									</div>
-									<div>
-									  <label class="input-label" for="hist_mean">Mean:</label>
-									  <input style="color: black;" type="number" id="hist_mean" name="hist_mean" step="0.1" value="{{ hist_mean }}" required>
-									</div>
-									<div>
-									  <label class="input-label" for="hist_std">Standard Deviation:</label>
-									  <input style="color: black;" type="number" id="hist_std" name="hist_std" step="0.1" value="{{ hist_std }}" required>
-									</div>
-									<br>
-									<button type="submit" class="button-84" role="button">Predict</button>
-								  </form>
-								  <h2>Geometric parameters</h2>
-								  <img src="static/img1.png" alt="Geometry" width="540" height="367">
-								</div>
-							
-								<div style="flex: 1; padding: 10px;">
-								  <h2>Results</h2>
-									<div>
-									  <h3>Intruduction</h3>
-									  This is a test...
-							
-									  <img src="data:image/png;base64, {{ plot_data }}" />
-							
-									</div>
-								</div>
-							  </div>
-
-
-
-						</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="../static/images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Sílvio Cândido e UBI, 2023.</p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-
-		<!-- Scripts -->
-			<script src="../static/js/jquery.min.js"></script>
-			<script src="../static/js/browser.min.js"></script>
-			<script src="../static/js/breakpoints.min.js"></script>
-			<script src="../static/js/util.js"></script>
-			<script src="../static/js/main.js"></script>
-
-	</body>
+</body>
 </html>

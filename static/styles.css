@@ -1,0 +1,228 @@
+
+        .container {
+            display: flex;
+			
+        }
+
+        .left-section, .right-section {
+            flex: 1;
+            padding: 2rem;
+        }
+		
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            margin-bottom: 1rem;
+        }
+		
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%; /* Adjust the padding as needed */
+    background-color: #0c2340; /* Adjust the background color as needed */
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem; /* Adjust the font size as needed */
+    border-top: 1px solid #cccccc; /* Optional: adds a line at the top of the footer */
+    color: white;
+}
+
+.footer-left {
+    /* Adjust styling as needed */
+}
+p {
+  line-height: 1.5em; /* 1.5 times the size of the current font */
+}
+
+.footer-right {
+    display: flex; /* Ensures that all child elements are in a row */
+    align-items: center; /* Centers the links vertically */
+}
+
+.footer-right a {
+    display: inline-block; /* Explicitly makes links inline-block */
+    margin-left: 20px; /* Adjust the spacing between links as needed */
+    color: white; /* Adjust link color as needed */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-right a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+}
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 2rem 20rem;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0c2340; /* Adjust the color to match your design */
+  padding: 10px 20px; /* Adjust the padding to control the spacing */
+  color: white;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px; /* Adjust the max-width as necessary */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60%; /* Adjust the percentage based on desired width relative to the page */
+  margin: 0 auto; /* This centers the .logo div if it's a block-level element */
+  
+}
+
+.logo img {
+  width: 100%;
+  height: auto; /* This will maintain the aspect ratio of the image */
+  display: block; /* This removes any additional space beneath the image */
+  
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+
+nav li {
+  padding: 0 10px; /* Adjust the spacing between menu items */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold; /* Makes the font bold */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+  }
+  
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    padding: 5px 0; /* Adjust the padding for a stacked layout on mobile */
+  }
+}
+
+.chapter-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0; /* Reset any default margin */
+}
+
+.chapter-nav li {
+  display: inline;
+  margin-right: 20px; /* Space between items */
+}
+
+.chapter-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.chapter-nav a:hover {
+  text-decoration: underline;
+}
+
+
+.titlemark {
+    -webkit-text-size-adjust: 100%;
+    word-wrap: break-word;
+    color: #111;
+    box-sizing: border-box;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+
+figure {
+  /* Center the figure element itself */
+  text-align: center;
+  /* Optional: Add space around the figure */
+  margin: 20px;
+}
+
+figcaption {
+  /* Center the caption text */
+  text-align: center;
+  /* Optional styles */
+  font-style: italic; /* common for figure captions */
+  margin-top: 10px; /* space between image and caption */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-div {
+  width: 50%; /* or whatever width you want */
+  padding: 20px;
+  border: 2px solid #000;
+
+  text-align: center; 
+  background-color: rgb(236, 236, 236); 
+  color: black; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+  margin-bottom: 1em; /* Adjusts space below the entire list */
+}
+
+ol li {
+  margin-bottom: 0.5em; /* Adjusts space between list items */
+  padding-left: 1em; /* Adjusts the indent of list items */
+}
+
+ol li::before {
+  font-weight: bold;
+  content: attr(data-label); /* Uses a custom attribute from the list item for bold text */
+  margin-right: 0.5em; /* Adjusts space after the bold text and before the colon */
+}
+
+
+/* Optional: if you want to add more space after the colon before the description starts */
+ol li span {
+  padding-left: 0.5em;
+}
+
+
+img.full-width {
+  width: 100%; /* Set image width to 100% of the parent container */
+  height: auto; /* Maintain aspect ratio */
+}
