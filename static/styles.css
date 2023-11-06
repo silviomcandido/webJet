@@ -57,7 +57,7 @@ p {
 
 body{
   font-family: Arial, sans-serif;
-  margin: 2rem 20rem;
+  margin: 2rem 10%;
 }
 
 
@@ -114,6 +114,7 @@ nav a:hover {
   text-decoration: underline; /* Adds underline on hover */
 }
 
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -125,6 +126,14 @@ nav a:hover {
 
   nav li {
     padding: 5px 0; /* Adjust the padding for a stacked layout on mobile */
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Adjust the layout for tablet-specific settings */
+  body{
+    font-family: Arial, sans-serif;
+    margin: 2rem 0rem;
   }
 }
 
