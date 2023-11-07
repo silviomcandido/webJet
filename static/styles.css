@@ -50,7 +50,7 @@
 
 body{
   font-family: Arial, sans-serif;
-  margin: 2rem 10%;
+  margin: 0rem 10%;
 }
 
 
@@ -126,7 +126,7 @@ nav a:hover {
   /* Adjust the layout for tablet-specific settings */
   body{
     font-family: Arial, sans-serif;
-    margin: 2rem 0rem;
+    margin: 0rem 0rem;
   }
 }
 
