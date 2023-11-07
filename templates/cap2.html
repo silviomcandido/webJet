@@ -9,6 +9,20 @@
   <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
   </script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  
+  
 </head>
 <body>
 
@@ -66,13 +80,16 @@ A formação do Cone de Taylor é uma manifestação direta da interação entre
 										
 											<p>Atua na superfície livre, resistindo à formação do cone. onde, \( \gamma \) é a tensão superficial e \( S \) a superfície livre do liquido.</p>
 
+
                       $$ \mathbf{f}_{\gamma} = \gamma \nabla S $$
 
 										<li style="font-weight: bold;"> Força de Polarização: </li>
 	
 										<p>Surge devido à interação do campo elétrico com polarizações induzidas no fluido.</p>
 
+                    <div class="math-container">
                     $$ \mathbf{f}_{Q^+} = \nabla \cdot (\mathbf{P} \otimes \mathbf{E}) - \mathbf{P} \cdot \nabla \mathbf{E} $$
+                    </div>
 										
 										<li style="font-weight: bold;">Força Gravitacional: </li>
 	
@@ -116,7 +133,8 @@ $$ \nabla \cdot \mathbf{u} = 0, \quad \text{em } \Omega_0 \times [0, T] $$
 
   <li style="font-weight: bold;"> Conservação da Quantidade de movimento: </li>
 
-  $$ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}_\sigma +\mathbf{f}_g +\mathbf{f}_e , \quad \text{em } \Omega_0 \times [0, T]. $$
+  <div class="math-container">
+  $$ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}_\sigma +\mathbf{f}_g +\mathbf{f}_e , \quad \text{em } \Omega_0 \times [0, T]. $$</div>
 
   
   <li style="font-weight: bold;"> Conservação da Densidade de Carga Elétrica: </li>
@@ -125,13 +143,15 @@ $$ \nabla \cdot \mathbf{u} = 0, \quad \text{em } \Omega_0 \times [0, T] $$
 
   <li style="font-weight: bold;"> Campo Elétrico: </li>
 
+  <div class="math-container">
   $$ \varepsilon \nabla \mathbf{E} = -\rho_{e} , \quad \mathbf{E} = -\nabla \phi$$
+</div>
 
   <li style="font-weight: bold;"> Força Tensão Superficial, Gravitacional, Elétrica: </li>
 
-
+  <div class="math-container">
   $$ \mathbf{f}_{\sigma} = \sigma \kappa \mathbf{n}, \quad \mathbf{f}_{g} = \rho \mathbf{g}, \quad \mathbf{f}_e = \mathbf{E} \cdot \nabla \mathbf{E} - \frac{1}{2} \nabla E^2$$
-  
+</div>
 
 
   </ul>

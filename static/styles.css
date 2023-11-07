@@ -228,3 +228,7 @@ img.full-width {
   width: 100%; /* Set image width to 100% of the parent container */
   height: auto; /* Maintain aspect ratio */
 }
+
+.math-container {
+  overflow-x: auto; /* Allows scrolling on small screens */
+}
