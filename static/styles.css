@@ -20,40 +20,33 @@
             margin-bottom: 1rem;
         }
 		
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 10%; /* Adjust the padding as needed */
-    background-color: #0c2340; /* Adjust the background color as needed */
-    font-family: Arial, sans-serif;
-    font-size: 0.8rem; /* Adjust the font size as needed */
-    border-top: 1px solid #cccccc; /* Optional: adds a line at the top of the footer */
-    color: white;
-}
-
-.footer-left {
-    /* Adjust styling as needed */
-}
-p {
-  line-height: 1.5em; /* 1.5 times the size of the current font */
-}
-
-.footer-right {
-    display: flex; /* Ensures that all child elements are in a row */
-    align-items: center; /* Centers the links vertically */
-}
-
-.footer-right a {
-    display: inline-block; /* Explicitly makes links inline-block */
-    margin-left: 20px; /* Adjust the spacing between links as needed */
-    color: white; /* Adjust link color as needed */
-    text-decoration: none; /* Removes underline from links */
-}
-
-.footer-right a:hover {
-    text-decoration: underline; /* Adds an underline on hover */
-}
+        footer {
+          display: flex;
+          text-align: center; /* Center-align text */
+          color: white; /* White text color */
+          background: #0c2340; /* Assuming you want a black background */
+        }
+        
+        .footer-content {
+          display: flex; /* Use Flexbox */
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center-align items horizontally */
+          padding: 20px; /* Add some padding */
+        }
+        
+        hr {
+          width: 80%; /* Set the width of the horizontal line */
+          border: 0; /* Remove the default border */
+          height: 1px; /* Set the height of the line */
+          background-color: white; /* Set the line color to white */
+          margin: 20px 0 1.5em; /* Add margin above and 1.5em space below the line */
+        }
+        
+        .footer-text {
+          font-size: 0.8em; /* Set the font size */
+          margin-top: -20px; /* Adjust the position as needed */
+        }
+        
 
 body{
   font-family: Arial, sans-serif;
