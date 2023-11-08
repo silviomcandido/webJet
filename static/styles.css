@@ -59,7 +59,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #0c2340; /* Adjust the color to match your design */
-  padding: 10px 20px; /* Adjust the padding to control the spacing */
+  padding: 10px 0px; /* Adjust the padding to control the spacing */
   color: white;
 }
 
@@ -231,4 +231,12 @@ img.full-width {
 
 .math-container {
   overflow-x: auto; /* Allows scrolling on small screens */
+}
+
+p {
+  line-height: 1.5em; /* common practice for readability */
+}
+
+ol, ul {
+  line-height: 2em; /* though this is unusually large for screen display */
 }
