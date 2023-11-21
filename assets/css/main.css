@@ -186,6 +186,17 @@ input, select, textarea {
 		text-decoration: none; /* Adds underline on hover */
 	}
 
+	
+	h2 a {
+		color: #3758ac; /* Color of the link */
+		text-decoration: none; /* Removes underline from the link */
+	}
+	
+	/* Hover effect for the link */
+	h2 a:hover {
+		text-decoration: none; /* Adds underline on hover */
+	}
+
 	h3 {
 		font-size: 1.2em;
 		margin-bottom: 0.8em;
@@ -2051,10 +2062,10 @@ p {
 			}
 
 			.images-post {
-				width: 70vw;
+				width: 80vw;
 			}
 			.images-post-2 {
-				height: 70vw;
+				height: 80vw;
 			}
 
 			.equation {
