@@ -25,11 +25,11 @@
 									<p class="white-text">Simulation of Atomization of Eletrohydodynamic Jets</p>
 									<nav id="nav">
 										<a href="index.html" >Home</a>
-										<a href="cap1.html" class="current-page-item">Intro</a>
+										<a href="cap1.html" class="current-page-item">Intro/Teoria</a>
 										<a href="cap3.html">Modelação</a>
 										<a href="cap4.html">Desempenho</a>
 										<a href="cap5.html">Aplicações</a>
-										<a href="contactos.html">Contactos</a>
+										<a href="artigos.html">Publicações</a>
 									</nav>
 								</header>
 
@@ -83,8 +83,125 @@
 							</div>
 							<div class="col-5 col-12-medium">
 								<figure class="image main">
-									<img src="./images/modos.png" alt="Descriptive text about the image"  style="width: 25vw; float: right;">
-									<figcaption>Fig 1. Description of the figure.</figcaption>
+									<img src="./images/modos.png" alt="Descriptive text about the image"  class="images-post">
+									<figcaption>Fig 1. Visualização experimental de três diferentes modos de funcionamento do jato EHD, Dripping, Cone-Jato e Multi-Jato. Estes modos estão ordenados segundo o potencial elétrico aplicado no bocal. Na fotografia mais à direita temos a formação de dois jatos no bocal e um deles abre-se após um jato fino.</figcaption>
+								  </figure>
+
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-12">
+
+								<section>
+									<h2>2. Fundamentos de Jatos Eletrohidrodinâmicos</h2>
+									<p> Os jatos eletrohidrodinâmicos surgem devido à interação de forças eletromecânicas num fluido submetido a um campo elétrico. Neste capítulo será feita a descrição detalhada desses mecanismos.</p>
+									<ol>
+										<li>  Descrição electomecânica das forças que estão em jogo na formação de jatos EHD  ; </li>
+										<li>  Detalhe das forças a atuar nas instabilidades; </li>
+										<li>  Equações de Governo do escoamento bifásico Eletrohidrodinâmico;</li>
+										<li>  Simplificações da Magnetohidrodinâmica e Formulação da Eletrohidrodinamica;</li>
+										<li>  Grupos adimensionais e tempos de relaxação relevantes para o estudo.</li>
+									</ol>
+								</section>
+
+								<section>
+
+									<h2>2.1. Princípio do Cone de Taylor</h2>
+									<p> Quando um líquido é submetido a um campo elétrico externo e, se este último for suficientemente intenso, pode ocorrer um cone agudo de líquido, a partir do qual, se as condições o permitirem, se forma um jato fino. Este cone é conhecido como ``Cone de Taylor'', em homenagem ao físico Geoffrey Ingram Taylor, que fez contribuições significativas para a compreensão deste efeito nos anos 1960 \cite{Taylor1964}. 
+										A formação do Cone de Taylor é uma manifestação direta da interação entre as forças eletrostáticas e as forças de tensão superficial. Em essência, sob a influência de um campo elétrico, as cargas elétricas acumulam-se na superfície do líquido. A repulsão entre as cargas semelhantes provoca uma força que age contra a tensão superficial, que tende a manter a superfície do líquido coesa de forma uniforme, e.g., a forma habitual do menisco. Quando a força eletrostática consegue superar a tensão superficial, o cone emite um jato eletrohidrodinâmico. Este cone pode ser visto na Figura \ref{fig:2.1}, onde o líquido é representado por $\Omega_1$ e o ambiente externo (ar) é o $\Omega_2$. Na mesma figura vemos um bocal capilar que está a um potencial elétrico $\Phi$, pelo qual entra o líquido. </p>
+
+										As forças atuantes no cone de Taylor são:
+								</section>
+
+							</div>
+							<div class="col-7 col-12-medium">
+
+								<section>
+
+							
+										
+									<ul>
+										<li style="font-weight: bold;">Força Elétrica (Força de Maxwell): </li>
+
+										\[
+										\mathbf{f}_{e} = \rho_e \mathbf{E}
+										\]
+										
+									<li style="font-weight: bold;"> Força de Tensão Superficial: </li>
+									
+
+									\[
+									\mathbf{f}_{\gamma} = \gamma \nabla S
+									\]
+
+									<li style="font-weight: bold;"> Força de Polarização: </li>
+
+
+									\[
+									\mathbf{f}_{Q^+} = \nabla \cdot (\mathbf{P} \otimes \mathbf{E}) - \mathbf{P} \cdot \nabla \mathbf{E}
+									\]
+									
+									<li style="font-weight: bold;">Força Gravitacional: </li>
+
+									\[
+									\mathbf{f}_{g} = \rho \mathbf{g}
+									\]
+									
+									<li style="font-weight: bold;"> Forças Viscosas: </li>
+
+
+									\[
+									\mathbf{f}_{\mu} = \mu \nabla^2 \mathbf{u}
+									\]
+
+																		
+									<li style="font-weight: bold;"> Força de Pressão: </li>
+
+
+									\[
+									\mathbf{f}_{p} = -\nabla p
+									\]
+									</ul>
+								</section>
+
+							</div>
+							<div class="col-5 col-12-medium">
+								<figure class="image main">
+									<img src="./images/Fig2.png" alt="Descriptive text about the image"  class="images-post">
+									<figcaption>Fig 2.1  Esquema das forças eletrostáticas e hidrodinâmicas a atuar na formação de um cone de Taylor.</figcaption>
+								  </figure>
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="container">
+						<h2>2.2. Tipos de instabilidades </h2>
+						<div class="row main-row">
+							<div class="col-3 col-12-medium">
+								<h2>Rayleigh-Plateau</h2>
+								<figure class="image main">
+									<img src="./images/Press.png" alt="Descriptive text about the image"  class="images-post-2">
+									<figcaption>Fig 2.2  Demonstração da instabilidade de onda devido à tensão superficial.</figcaption>
+								  </figure>
+
+							</div>
+							<div class="col-4 col-12-medium">
+								<h2>Bending/Whipping</h2>
+								<figure class="image main">
+									<img src="./images/whip.png" alt="Descriptive text about the image"  class="images-post-2">
+									<figcaption>Fig 2.3  Esquema das forças atuantes, que influenciam o jato na formação da primeira onda (curva abc) .</figcaption>
+								  </figure>
+
+							</div>
+							<div class="col-4 col-12-medium">
+								<h2>Expansão de Coulomb</h2>
+								<figure class="image main">
+									<img src="./images/Spray_E_field.png" alt="Descriptive text about the image"  class="images-post-2">
+									<figcaption>Fig 2.5  Visualização do campo elétrico e da expansão eletrostática.</figcaption>
 								  </figure>
 
 							</div>
@@ -98,14 +215,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-8 col-12-medium">
-							<section>
 								<h2>Apoios</h2>
-								<div>
-									<div class="logo">
-									<img src="./images/LOGOS.png" alt="CFD Direct">
-									</div>
+								<div id="support">
+									<img src="./images/LOGOS.png" alt="CFD Direct" id="copyright-image">
 								</div>
-							</section>
 
 						</div>
 					</div>
@@ -113,6 +226,7 @@
 						<div class="col-12">
 							<div id="copyright">
 								&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+
 							</div>
 
 						</div>
@@ -120,12 +234,15 @@
 				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+</body>
 </html>

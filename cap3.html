@@ -29,7 +29,7 @@
 										<a href="cap3.html"class="current-page-item">Modelação</a>
 										<a href="cap4.html">Desempenho</a>
 										<a href="cap5.html">Aplicações</a>
-										<a href="contactos.html">Contactos</a>
+										<a href="artigos.html">Publicações</a>
 									</nav>
 								</header>
 
@@ -38,6 +38,7 @@
 					</div>
 				</div>
 
+				
 			<!-- Main -->
 				<div id="main">
 					<div class="container">
@@ -51,9 +52,10 @@
 									</p>
 									<p>Também iremos descrever a metodologia utilizada para implementar este modelo no ambiente OpenFOAM, delineando os passos críticos para configurar e executar a simulação, assim como os desafios associados a esta implementação. Em resumo, este capítulo apresenta:</p>
 									<ol>
-										<li>  Modelo {\it Volume of Fluid}; </li>
+										<li>  Método das Volumes Finitos (FVM)  ; </li>
+										<li>  Método dos Volumes de Fluido (VoF)  ; </li>
 										<li>  Tratamento algébrico e geométrico da interface do escoamento bifásico;</li>
-										<li>  Modelo {\it Lagrangian Tracking Particle};</li>
+										<li>  Modelo Lagrangian Tracking Particle;</li>
 										<li>  Modelo híbrido VoF-LPT.</li>
 									</ol>
 								</section>
@@ -61,6 +63,9 @@
 							</div>
 						</div>
 					</div>
+					<br>
+					<br>
+					<br>
 					<div class="container">
 						<div class="row main-row">
 							<div class="col-7 col-12-medium">
@@ -72,16 +77,19 @@
 									<p>O OpenFOAM utiliza o método dos volumes finitos (FVM) com uma formulação centrada nas células para resolver sistemas de equações diferenciais parciais em malhas tridimensionais estruturadas ou não estruturadas, constituídas por células convexas de forma arbitrária.  Para isso é necessário discretizar a equação de modo a transformar uma ou mais equações governantes num sistema correspondente de equações algébricas, que seja possível de resolver. Para isso devemos expressar as equações de Navier-Stokes na forma integral, para um volume de controlo \(V_c\).</p>
 
 
+									<div class="equation">
 									\[
 									\begin{aligned} \int_{t}^{t+\Delta t} \left[ \int_{V_c} \left( \frac{\partial \rho \phi}{\partial t}  - S_{\phi} \right) d V \right] d t & = \\ &=\int_{t}^{t+\Delta t}\left[ \oint_{Sc} \left(\Gamma_{\phi} \nabla \phi - \rho \phi \vec{\mathrm{U}} \right)\cdot d \vec{S} \right] d t   \end{aligned}
 									\]
+									</div>
 
 
 									A estabilidade e precisão da integração temporal é dada pala condição de Courant para a hidrodinâmica e pelo tempo de relaxação elétrica, tal que,
-
+									<div class="equation">
 									\[
-									\Delta t= F_{s} \min \left[\min \left\{\frac{\varepsilon_{1}}{\sigma_{1}}, \frac{\varepsilon_{2}}{\sigma_{2}}\right\}, C_\text{max} \frac{\Delta x}{\|\vec{\mathrm{U}}\|}\right]
+									\Delta t= F_{s} \min \left[\min \left\{\frac{\varepsilon_{1}}{\sigma_{1}}, \frac{\varepsilon_{2}}{\sigma_{2}}\right\}, C_\text{max} \frac{\Delta x}{\|\mathbf{u}\|}\right]
 									\]
+									</div>
 
 									Onde \( C_{max} = 0.1\) é o número de Courant máximo permitido e \( F_s = 0.9 \) o fator de segurança. 
 
@@ -99,6 +107,8 @@
 							</div>
 						</div>
 					</div>
+					<br>
+					<br>
 					<br>
 					<div class="container">
 						<div class="row main-row">
@@ -118,6 +128,13 @@
 									\alpha (t)=\left\{\begin{array}{ll}{1} & {\text { em } \Omega_{1} (t),} \\ {0} & {\text { em  } \Omega_{2} (t),} \\ {\left] 0,1 \right[ } & {\text { em } \Sigma(t)}\end{array}\right.
 									\]
 
+									O método VOF acrescenta uma equação de governo para o transporte desta fração de volume \(\alpha\), denominada equação de advecção, dada por:
+
+									<div class="equation">
+										\[
+										\frac{\partial \alpha}{\partial t} + \nabla \cdot (\alpha \mathbf{u}) = 0
+										\]
+									</div>
 
 								</section>
 
@@ -132,6 +149,8 @@
 							</div>
 						</div>
 					</div>
+					<br>
+					<br>
 					<br>
 					<div class="container">
 						<div class="row main-row">

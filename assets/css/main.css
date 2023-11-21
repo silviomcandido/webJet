@@ -24,17 +24,34 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+	
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
+	line-height: 1.25;
 }
 
-ol, ul {
-	list-style: none;
+.equation {
+    font-size: 18px; /* Example size, adjust as needed */
 }
+
+
+ul {
+	list-style: none	;
+}
+
+ol {
+	padding-left: 20px; /* Adjust as needed */
+}
+
+ol li {
+	padding-left: 20px; /* Adjust this value to increase or decrease the space */
+}
+
+
 
 .logo {
   width: 100%; /* Adjust the percentage based on desired width relative to the page */
@@ -57,6 +74,10 @@ ol, ul {
 
 .images-post {
 	width: 25vw;
+}
+
+.images-post-2 {
+	height: 25vw;
 }
 
 figure {
@@ -130,6 +151,8 @@ input, select, textarea {
 		font-family: 'Ubuntu Condensed', sans-serif;
 		color: #878e83;
 		letter-spacing: -1px;
+		text-align: justify;
+		hyphens: auto; /* This will automatically add hyphens where appropriate */
 	}
 
 	h1, h2, h3, h4 {
@@ -151,6 +174,16 @@ input, select, textarea {
 	h3, h4 {
 		color: #3758ac;
 		margin-bottom: 0.5em;
+	}
+
+	h3 a {
+		color: #3758ac; /* Color of the link */
+		text-decoration: none; /* Removes underline from the link */
+	}
+	
+	/* Hover effect for the link */
+	h3 a:hover {
+		text-decoration: none; /* Adds underline on hover */
 	}
 
 	h3 {
@@ -2019,6 +2052,13 @@ p {
 
 			.images-post {
 				width: 70vw;
+			}
+			.images-post-2 {
+				height: 70vw;
+			}
+
+			.equation {
+				font-size: 14px; /* Smaller font size for small screens */
 			}
 
 		/* Banner */
