@@ -80,6 +80,10 @@ ol li {
 	height: 25vw;
 }
 
+.images-post-big {
+	height: 30vw;
+}
+
 figure {
 	/* Center the figure element itself */
 	text-align: center;
@@ -2067,7 +2071,9 @@ p {
 			.images-post-2 {
 				height: 80vw;
 			}
-
+			.images-post-big {
+				height: 50vw;
+			}
 			.equation {
 				font-size: 14px; /* Smaller font size for small screens */
 			}
