@@ -29,7 +29,7 @@
 										<a href="cap3.html">Modelação</a>
 										<a href="cap4.html">Desempenho</a>
 										<a href="cap5.html">Aplicações</a>
-										<a href="artigos.html">Publicações</a>
+										<a href="artigos.html">Referências</a>
 									</nav>
 								</header>
 
@@ -127,9 +127,69 @@
 						</div>
 					</div>
 
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-12">
+	
+								<section>
+									<h2>2.2 Equações de Governo</h2>
+									<p> Considere um domínio \( \Omega_0 \) durante um intervalo de tempo \( t \in [0, T] \). As equações de governo para a conservação de massa, quantidade de movimento, densidade de carga elétrica e campo elétrico são apresentadas a seguir:</p>
+	
+									<span style="font-weight: bold;">Conservação da Massa (Equação da Continuidade):</span>
+									\[
+									\quad \nabla \cdot \mathbf{u} = 0, \quad \text{em } \Omega_0 \times [0, T].
+									\]
+	
+									
+									<span style="font-weight: bold;">Conservação da Quantidade de Movimento:</span>
+									\[
+									\quad \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}, \quad \text{em } \Omega_0 \times [0, T].
+									\]
+	
+									
+									<span style="font-weight: bold;">Conservação da Densidade de Carga Elétrica:</span>
+									\[
+									\quad \frac{\partial \rho_{e}}{\partial t} + \nabla \cdot\left(\rho_{e} \vec{u}  \right) + \nabla \cdot (\sigma \vec{E}) = 0.
+									\]
+	
+									
+									<span style="font-weight: bold;">Campo Elétrico:</span>
+									\[
+									\quad -\varepsilon \nabla^2 \phi = \rho_{e}.
+									\]
+	
+	
+									<p>Em termos das forças que as gotas emitidas por um jato EHD irão estar sujeitas são: uma força elétrica da ordem \(\sim \mathbf{f}_e \equiv  \varepsilon_0 \phi_e^2\), uma força gravitacional (no mesmo sentido do campo elétrico) da ordem de \(\sim \mathbf{f}_g \equiv  \rho d_d^3 \mathbf{g}\), uma força inercial devido à quantidade de movimento injetada no bocal tal que \( \mathbf{f}_p \equiv \rho Q_i^2 / D_i^2$\) e, por fim, uma força capilar de oposição ao campo elétrico da ordem $\sim \mathbf{f}_{\gamma} \equiv  \gamma D_0$ \footnote{Aqui usa-se o diâmetro externo do bocal \(D_0\) nas condições em que o cone de Taylor molha o bocal e fica preso à extremidade do boca. De considerar também que mesmo que isto não seja o caso podemos assumir que \(D_0/D_i \sim 1\) }.</p>
+	
+	
+									<p></p>Em resumo, as equações de governo aqui resumidas têm como hipóteses/simplificações:</p>
+	
+	
+									<ol>
+										<li>  Escoamento incompressível: Assume-se que a densidade do fluido é constante e não varia com a pressão ou outras variáveis. </li>
+										<li>  Fluidos não-miscíveis: Os diferentes fluidos (ou fases) não se misturam e mantêm uma interface distinta. </li>
+										<li>  Tensões induzidas desprezáveis: Ignora-se qualquer tensão devido a efeitos eletromagnéticos.</li>
+										<li>  Escoamento laminar: Ignora-se a turbulência e suas complexidades associadas.</li>
+										<li>  Campo elétrico estacionário: As variações temporais do campo elétrico são negligenciadas.</li>
+										<li>  Geometria fixa: A estrutura ou geometria que contém o fluido não se deforma ou move em resposta ao escoamento ou a forças externas.</li>
+										<li>  Propriedades do fluido constantes: A viscosidade e outras propriedades relevantes são consideradas constantes e não variáveis.</li>
+										<li>  Condição isotérmica: Não há variação de temperatura no domínio.</li>
+										<li>  Sem evaporação: Os fluidos não evaporam, independentemente das condições.</li>
+										<li>  Cargas elétricas constantes: As cargas elétricas no fluido são conservadas.</li>
+									</ol>
+								</section>
+	
+								<section>
+	
+								</section>
+	
+							</div>
+						</div>
+					</div>
+
 
 					<div class="container">
-						<h2>2.2. Tipos de instabilidades </h2>
+						<h2>2.3. Tipos de instabilidades </h2>
 						<div class="row main-row">
 							<div class="col-3 col-12-medium">
 								<h2><a href="cap4a.html">Rayleigh-Plateau</a></h2>
@@ -159,65 +219,7 @@
 					</div>
 				
 
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-12">
 
-							<section>
-								<h2>2.3 Equações de Governo</h2>
-								<p> Considere um domínio \( \Omega_0 \) durante um intervalo de tempo \( t \in [0, T] \). As equações de governo para a conservação de massa, quantidade de movimento, densidade de carga elétrica e campo elétrico são apresentadas a seguir:</p>
-
-								<span style="font-weight: bold;">Conservação da Massa (Equação da Continuidade):</span>
-								\[
-								\quad \nabla \cdot \mathbf{u} = 0, \quad \text{em } \Omega_0 \times [0, T].
-								\]
-
-								
-								<span style="font-weight: bold;">Conservação da Quantidade de Movimento:</span>
-								\[
-								\quad \rho \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}, \quad \text{em } \Omega_0 \times [0, T].
-								\]
-
-								
-								<span style="font-weight: bold;">Conservação da Densidade de Carga Elétrica:</span>
-								\[
-								\quad \frac{\partial \rho_{e}}{\partial t} + \nabla \cdot\left(\rho_{e} \vec{u}  \right) + \nabla \cdot (\sigma \vec{E}) = 0.
-								\]
-
-								
-								<span style="font-weight: bold;">Campo Elétrico:</span>
-								\[
-								\quad -\varepsilon \nabla^2 \phi = \rho_{e}.
-								\]
-
-
-								<p>Em termos das forças que as gotas emitidas por um jato EHD irão estar sujeitas são: uma força elétrica da ordem \(\sim \mathbf{f}_e \equiv  \varepsilon_0 \phi_e^2\), uma força gravitacional (no mesmo sentido do campo elétrico) da ordem de \(\sim \mathbf{f}_g \equiv  \rho d_d^3 \mathbf{g}\), uma força inercial devido à quantidade de movimento injetada no bocal tal que \( \mathbf{f}_p \equiv \rho Q_i^2 / D_i^2$\) e, por fim, uma força capilar de oposição ao campo elétrico da ordem $\sim \mathbf{f}_{\gamma} \equiv  \gamma D_0$ \footnote{Aqui usa-se o diâmetro externo do bocal \(D_0\) nas condições em que o cone de Taylor molha o bocal e fica preso à extremidade do boca. De considerar também que mesmo que isto não seja o caso podemos assumir que \(D_0/D_i \sim 1\) }.</p>
-
-
-								<p></p>Em resumo, as equações de governo aqui resumidas têm como hipóteses/simplificações:</p>
-
-
-								<ol>
-									<li>  Escoamento incompressível: Assume-se que a densidade do fluido é constante e não varia com a pressão ou outras variáveis. </li>
-									<li>  Fluidos não-miscíveis: Os diferentes fluidos (ou fases) não se misturam e mantêm uma interface distinta. </li>
-									<li>  Tensões induzidas desprezáveis: Ignora-se qualquer tensão devido a efeitos eletromagnéticos.</li>
-									<li>  Escoamento laminar: Ignora-se a turbulência e suas complexidades associadas.</li>
-									<li>  Campo elétrico estacionário: As variações temporais do campo elétrico são negligenciadas.</li>
-									<li>  Geometria fixa: A estrutura ou geometria que contém o fluido não se deforma ou move em resposta ao escoamento ou a forças externas.</li>
-									<li>  Propriedades do fluido constantes: A viscosidade e outras propriedades relevantes são consideradas constantes e não variáveis.</li>
-									<li>  Condição isotérmica: Não há variação de temperatura no domínio.</li>
-									<li>  Sem evaporação: Os fluidos não evaporam, independentemente das condições.</li>
-									<li>  Cargas elétricas constantes: As cargas elétricas no fluido são conservadas.</li>
-								</ol>
-							</section>
-
-							<section>
-
-							</section>
-
-						</div>
-					</div>
-				</div>
 			</div>
 
 

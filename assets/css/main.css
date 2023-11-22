@@ -34,6 +34,16 @@ body {
 	line-height: 1.25;
 }
 
+button {
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.subOptions {
+    display: none;
+    margin-top: 5px;
+}
+
 .equation {
     font-size: 18px; /* Example size, adjust as needed */
 }
@@ -56,11 +66,13 @@ ol li {
 .logo {
   width: 100%; /* Adjust the percentage based on desired width relative to the page */
   margin: 0 auto; /* This centers the .logo div if it's a block-level element */
+  text-align: center;
   
 }
 
 .logo img {
-  width: 100%;
+	text-align: center;
+  width: 25%;
   height: auto; /* This will maintain the aspect ratio of the image */
   display: block; /* This removes any additional space beneath the image */
   
@@ -256,7 +268,7 @@ input, select, textarea {
 		margin-bottom: 0;
 	}
 
-	h1, h2, h3, h4, h5, h6, ol, ul {
+	h1, h2, h4, h5, h6, ol, ul {
 		text-align: left;
 	}
 
@@ -1658,7 +1670,7 @@ p {
 			top: 1px;
 			line-height: 84px;
 			text-transform: none;
-			font-size: 1.3em;
+			font-size: 1.2em;
 			letter-spacing: -1px;
 		}
 

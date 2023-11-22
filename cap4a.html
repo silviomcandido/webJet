@@ -29,7 +29,7 @@
 										<a href="cap3.html">Modelação</a>
 										<a href="cap4.html" class="current-page-item">Desempenho</a>
 										<a href="cap5.html">Aplicações</a>
-										<a href="artigos.html">Publicações</a>
+										<a href="artigos.html">Referências</a>
 									</nav>
 								</header>
 
@@ -51,12 +51,56 @@
 										
 								</section>
 								<br>
+
+
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-7 col-12-medium">
+
 								<section>
+									<h2>3.1. Método dos Volumes Finitos (FVM)</h2>
+									<p>O método de volume finito do OpenFOAM usa uma metodologia colocalizada numa malha computacional poliédrica não estruturada com elementos de malha arbitrários. As quantidades dinâmicas do fluido são centradas nos centróides do volume de controlo. Uma variedade de esquemas disponíveis de interpolação, discretização e solução matricial pode ser selecionada em tempo de execução. O OpenFOAM é suficientemente flexível para permitir a aplicação de diferentes esquemas para cada termo individual da equação.</p>
+
+									<p>O OpenFOAM utiliza o método dos volumes finitos (FVM) com uma formulação centrada nas células para resolver sistemas de equações diferenciais parciais em malhas tridimensionais estruturadas ou não estruturadas, constituídas por células convexas de forma arbitrária.  Para isso é necessário discretizar a equação de modo a transformar uma ou mais equações governantes num sistema correspondente de equações algébricas, que seja possível de resolver. Para isso devemos expressar as equações de Navier-Stokes na forma integral, para um volume de controlo \(V_c\).</p>
+
+
+								</section>
+
+							</div>
+							<div class="col-5 col-12-medium">
+
+								<section>
+									<h2>Visualização dos Campos do Escoamento EHD</h2>
+									<p>Aqui é possivél selecional uma combinação dos principais campos do escoamento bifásico EHD, para o instante da primeira emissão. Resultados para um caudal de \( 5 \) nL/s e um potencial elétrico aplicado de \( 4 \) kV.</p>
+									<h4> Selecione a combinação a visualizar com os butões em baixo:</h4>
+
+									<div>
+										<label for="fieldSelect">Field:</label>
+										<select id="fieldSelect">
+											<option value="">Select Field</option>
+											<option value="alpha">alpha</option>
+											<option value="Ef">Ef</option>
+											<option value="rhoE">rhoE</option>
+											<option value="Ue">Ue</option>
+										</select>
+									</div>
 								
-								<figure class="image main">
-									<img src="./images/cap4.1_2.png" alt="Descriptive text about the image"  style="width: 50vw; float: right; margin-right: 20px;">
-									<figcaption>Fig 1. Description of the figure.</figcaption>
-								  </figure>
+									<div>
+										<label for="vectorFieldSelect">Vector Field:</label>
+										<select id="vectorFieldSelect">
+											<option value="">Select Vector Field</option>
+											<option value="none">None</option>
+											<option value="Ef">Ef</option>
+											<option value="U">U</option>
+										</select>
+									</div>
+								
+									<img id="selectedImage" src="" alt="Selected Field" class="images-post"/>
+
+									<script src="assets/js/script.js"></script>
 
 								</section>
 
@@ -64,10 +108,12 @@
 						</div>
 					</div>
 
+					<br>
+
 					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
 						<div class="row main-row">
 							<div class="col-12">
-								<h4 style="color: #fff;">4.2. Estabilidade e condição de funcionamento</h4>
+								<h2 style="color: #fff;">4.2. Estabilidade e condição de funcionamento</h2>
 
 								<figure class="image main">
 									<img src="./images/anim_iso.gif" alt="Descriptive text about the image"   class="images-post-big">
@@ -84,24 +130,17 @@
 			<div class="footer-wrapper">
 				<div class="container">
 					<div class="row">
-						<div class="col-8 col-12-medium">
-							<section>
-								<h2>Apoios</h2>
-								<div>
-									<div class="logo">
-									<img src="./images/LOGOS.png" alt="CFD Direct">
-
-									</div>
-								</div>
-							</section>
+						<div class="col-12">
+							<h2 style="color: #fff;">Apoios</h2>
+									<img src="./images/LOGOS.png" alt="CFD Direct" class="logo">
 
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-12">
-
 							<div id="copyright">
 								&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+
 							</div>
 
 						</div>
@@ -111,12 +150,13 @@
 
 	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
-	</body>
+</body>
 </html>
