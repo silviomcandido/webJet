@@ -47,10 +47,10 @@
 
 								<section>
 									<h2>3. Modelação </h2>
-									<p>A modelação matemática fornece uma ferramenta crucial para a análise e previsão do comportamento dos jatos eletrohidrodinâmicos. Através da implementação de modelos teóricos em ambientes de simulação, é possível investigar as características complexas destes jatos, como os padrões de atomização e a formação de gotas, sem a necessidade de realizar experiências extensivas e dispendiosas.</p>
-									<p>Neste capítulo, apresentamos uma abordagem para a modelação de jatos EHD, utilizando o software OpenFOAM, um conhecido software de simulação numérica baseado em métodos de volumes finitos (FVM). Exploraremos o modelo matemático subjacente à simulação, discutindo as equações fundamentais que governam o escoamento e a atomização em jatos EHD, bem como os parâmetros específicos necessários para a sua aplicação.
+									<p>A modelação matemática fornece uma ferramenta crucial para a análise e previsão do comportamento dos jatos eletrohidrodinâmicos. Através da implementação de modelos teóricos em ambientes de simulação é possível investigar as características mais complexas destes jatos, como os padrões de atomização e a formação de gotas, e isto sem a necessidade de realizar experiências longas e dispendiosas.</p>
+									<p>Neste capítulo apresentamos uma abordagem para a modelação de jatos EHD utilizando como código base OpenFOAM, um conhecido software de criação de modelos de simulação numérica baseado no métodos de volumes finitos (FVM). Iremos apresentar o modelo físico-matemático subjacente à simulação, discutindo as equações fundamentais que governam o escoamento e a atomização em jatos EHD, bem como os parâmetros específicos necessários para a sua aplicação.
 									</p>
-									<p>Também iremos descrever a metodologia utilizada para implementar este modelo no ambiente OpenFOAM, delineando os passos críticos para configurar e executar a simulação, assim como os desafios associados a esta implementação. Em resumo, este capítulo apresenta:</p>
+									<p>Também iremos descrever a metodologia utilizada para implementar este modelo no ambiente OpenFOAM, delineando os passos críticos para criar e executar a simulação, assim como os desafios associados a esta implementação. Em resumo, este capítulo apresenta uma proposta de modelo de simulação de jatos EHD baseada,</p>
 									<ol>
 										<li>  Método das Volumes Finitos (FVM)  ; </li>
 										<li>  Método dos Volumes de Fluido (VoF)  ; </li>
@@ -72,7 +72,9 @@
 
 								<section>
 									<h2>3.1. Método dos Volumes Finitos (FVM)</h2>
-									<p>O método de volume finito do OpenFOAM usa uma metodologia colocalizada numa malha computacional poliédrica não estruturada com elementos de malha arbitrários. As quantidades dinâmicas do fluido são centradas nos centróides do volume de controlo. Uma variedade de esquemas disponíveis de interpolação, discretização e solução matricial pode ser selecionada em tempo de execução. O OpenFOAM é suficientemente flexível para permitir a aplicação de diferentes esquemas para cada termo individual da equação.</p>
+									<p> A premissa básica de um método numérico que resolve as equações de governo de um problema físico-matemático é a procura da solução para o domínio computacional discretizado, que compreende um número finito de nós computacionais, tanto no espaço como no tempo. Em geral o objetivo é fornecer uma representação adequada da solução para o domínio físico contínuo. Isto diz respeito tanto à precisão como exatidão da solução numérica aproximada. Além disso, é premissa que ao aumentar o número de nós computacionais (até ao infinito) a solução numérica aproximada deve tender para da solução exata. A Figura 3.1 ilustra o que é a discretização do espaço de resolução das equações.</p>
+
+									<p>O método dos volumes finitos (FVM) é o de base dese trabalho utilizando uma metodologia colocalizada numa malha computacional poliédrica, não estruturada, com elementos de malha arbitrários. As propriedades que definem a dinâmica do fluido estão centradas nos centróides do volume de controlo.</p>
 
 									<p>O OpenFOAM utiliza o método dos volumes finitos (FVM) com uma formulação centrada nas células para resolver sistemas de equações diferenciais parciais em malhas tridimensionais estruturadas ou não estruturadas, constituídas por células convexas de forma arbitrária.  Para isso é necessário discretizar a equação de modo a transformar uma ou mais equações governantes num sistema correspondente de equações algébricas, que seja possível de resolver. Para isso devemos expressar as equações de Navier-Stokes na forma integral, para um volume de controlo \(V_c\).</p>
 
@@ -101,7 +103,7 @@
 
 								<figure class="figure">
 									<img src="images/Discretização.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.1  Ilustração do processo de discretização do espaço contínuo em discreto, as equações de governo passam a ter a forma matricial que é discreta correspondendo aos diferentes pontos da malha computacional espacial. </figcaption>
+									<figcaption>Fig 3.1   Ilustração do processo de discretização do espaço contínuo em discreto, as equações de governo passam a ter a forma matricial que é discreta e correspondem aos diferentes pontos da malha computacional.  </figcaption>
 								  </figure>
 
 							</div>
@@ -116,7 +118,7 @@
 
 								<section>
 									<h2>3.2. Método do Volume de Fluido (VoF)</h2>
-									<p>O Volume de Fluido (VoF) é um método de separação que tem uma vantagem peculiar que é o facto de, embora o domínio apresente duas fases imiscíveis, ser utilizado um único conjunto de equações para ambas porque separa as duas fases com uma única variável de estado.  Vamos supor que o sistema de fluidos bifásicos preenche todo o domínio computacional \(\Omega_0 \subset \mathbb{R}^2\), de forma que duas fases bulk \(\Omega_{\{1,2\}} \subset \mathbb{R}^2\) existem separadas por uma camada tampão \(\Sigma \subset \mathbb{R}^2\) que representa a interface entre os fluxos, isto significa</p>
+									<p>O método do Volume de Fluido (VoF) tem como vantagem peculiar o facto de ser utilizado apenas com um único conjunto de equações para ambas as fases do escoamento, porque utiliza uma única variável de estado.  Vamos supor que o sistema de fluido bifásico preenche todo o domínio computacional \( \Omega_0 \subset \mathbb{R}^2 \), de forma que duas fases \( \Omega_{\{1,2\}} \subset \mathbb{R}^2 \) separadas por uma espessura \( \Sigma \subset \mathbb{R}^2 \) que representa a interface entre os fluidos, tal que,</p>
 
 									\[
 									\Omega_0 = \Omega_1 (t) \cup \Omega_2 (t) \cup \Sigma (t).
@@ -128,7 +130,7 @@
 									\alpha (t)=\left\{\begin{array}{ll}{1} & {\text { em } \Omega_{1} (t),} \\ {0} & {\text { em  } \Omega_{2} (t),} \\ {\left] 0,1 \right[ } & {\text { em } \Sigma(t)}\end{array}\right.
 									\]
 
-									O método VOF acrescenta uma equação de governo para o transporte desta fração de volume \(\alpha\), denominada equação de advecção, dada por:
+									O método VOF acrescenta uma equação de governo para o transporte desta fração de volume \(\alpha\), denominada equação de convecção, dada por:
 
 									<div class="equation">
 										\[
@@ -143,7 +145,9 @@
 
 								<figure class="figure">
 									<img src="images/VOF.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.2. Esboço do problema clássico do jato em cone de Taylor em análise e exemplificação do método de Volume de Fluido (VoF) utilizado. O líquido no interior do capilar é conduzido por um campo elétrico externo constante. Os valores da fração de fase são representativos.</figcaption>
+									<figcaption>Fig 3.2. Esboço do clássico problema do jato em cone de Taylor e exemplificação do método de Volume de Fluido (VoF) utilizado. O líquido no interior do capilar é conduzido por um campo elétrico externo constante. Os valores da fração de fase são representativos.
+
+									</figcaption>
 								  </figure>
 
 							</div>
@@ -158,7 +162,7 @@
 
 								<section>
 									<h2>3.3. Método da Particula Discreta (LPT)</h2>
-									<p>Neste método uma formulação Euler-Lagrange é utilizada, onde o ar (ou qualquer outro fluido ambiente) é calculado através da formulação contínua do FVM e a fase líquida (gotas) é tratada como partículas discretas. Este método é particularmente útil quando temos gotas muito pequenas. Quando estas gotas são consideradas muito pequenas, as forças de tensão superficial são muito maiores que as hidrodinâmicas a atuar no voo da gota, de tal forma que a gota mantém uma forma esférica e coesa. Este tipo de método é útil pois requer menos poder computacional já que a interface da fase líquida não é explicitamente calculada.  Este método irá ser utilizado para as simulação onde se irá testar a formação de spray através do cone de Taylor, no qual as gotas mais pequenas são traduzidas do método Euler-Euler para Euler-Lagrange.</p>
+									<p>O método Lagrangiano de seguimento de partículas (LPT) segue o movimento de elementos de fluido Lagrangianos ao longo do domínio computacional. Cada elemento representa um determinado número de gotículas com propriedades idênticas, como sejam o diâmetro e a velocidade. São tratadas como massas pontuais e, portanto, não contêm volume. A posição e a velocidade são atualizadas em cada passo de tempo com base em equações diferenciais definidas para a sua trajetória e quantidade de movimento, </p>
 
 									\[
 									\frac{\partial \vec{x}_p}{\partial t} = \mathbf{u}_p,
@@ -176,9 +180,9 @@
 									<h3>3.3.1 Critérios conversão VoF-LPT</h3>
 
 									<ol>
-										<li> Diâmetro: \( d_p \le  d_\text{max} \), onde \( d_p = \sqrt[3]{\frac{6 V_p}{\pi}} \)</li>
-										<li> Esfericidade: \( \Psi_p \le 2 \), onde \( \Psi_p = \frac{2 \|\mathbf{r}_p\|_\text{max}}{d_p} \)</li>
-										<li> Carga elétrica: \( q_p \le q_R \), onde \( q_R = \left( 8 \pi \varepsilon_0 \gamma d_p^3 \right)^{1/2}\)</li>
+										<li> Diâmetro. \( d_p \le  d_\text{max} \), onde \( d_p = \sqrt[3]{\frac{6 V_p}{\pi}} \)</li>
+										<li> Esfericidade. \( \Psi_p \le 2 \), onde \( \Psi_p = \frac{2 \|\mathbf{r}_p\|_\text{max}}{d_p} \)</li>
+										<li> Carga elétrica. \( q_p \le q_R \), onde \( q_R = \left( 8 \pi \varepsilon_0 \gamma d_p^3 \right)^{1/2}\)</li>
 									</ol>
 
 
@@ -190,7 +194,7 @@
 
 								<figure class="figure">
 									<img src="images/LPTa.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.8. (esquerda) Visualização de um plano a cortar uma gota a voar no domínio de cálculo, colorido pela função $\alpha$ e com as linhas brancas a mostrar a malha computacional.  (direita) Demonstração de uma gota não-esférica com uma esfericidade \(\Psi_p > 1\) e uma gota esférica  \(\Psi_p \approx 1 \). </figcaption>
+									<figcaption>Fig 3.8. (esquerda) Visualização de um plano a cortar uma gota a que voa no domínio de cálculo, colorido pela função \( \alpha \) e com as linhas brancas a mostrar a malha computacional.  (direita) Demonstração de uma gota não-esférica com uma esfericidade \( \Psi_p > 1 \) e uma gota esférica  \( \Psi_p \approx 1 \). </figcaption>
 								  </figure>
 
 							</div>
