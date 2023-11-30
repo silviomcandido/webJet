@@ -47,20 +47,13 @@
 								<section>
 									<h2>2. Fundamentos de Jatos Eletrohidrodinâmicos</h2>
 									<p> Os jatos eletrohidrodinâmicos surgem devido à interação de forças eletromecânicas num fluido submetido a um campo elétrico. Neste capítulo será feita a descrição detalhada desses mecanismos.</p>
-									<ol>
-										<li>  Descrição electomecânica das forças que estão em jogo na formação de jatos EHD  ; </li>
-										<li>  Detalhe das forças a atuar nas instabilidades; </li>
-										<li>  Equações de Governo do escoamento bifásico Eletrohidrodinâmico;</li>
-										<li>  Simplificações da Magnetohidrodinâmica e Formulação da Eletrohidrodinamica;</li>
-										<li>  Grupos adimensionais e tempos de relaxação relevantes para o estudo.</li>
-									</ol>
 								</section>
 
 								<section>
 
 									<h2>2.1. Princípio do Cone de Taylor</h2>
-									<p> Quando um líquido é submetido a um campo elétrico externo e, se este último for suficientemente intenso, pode ocorrer um cone agudo de líquido, a partir do qual, se as condições o permitirem, se forma um jato fino. Este cone é conhecido como ``Cone de Taylor'', em homenagem ao físico Geoffrey Ingram Taylor, que fez contribuições significativas para a compreensão deste efeito nos anos 1960 \cite{Taylor1964}. 
-										A formação do Cone de Taylor é uma manifestação direta da interação entre as forças eletrostáticas e as forças de tensão superficial. Em essência, sob a influência de um campo elétrico, as cargas elétricas acumulam-se na superfície do líquido. A repulsão entre as cargas semelhantes provoca uma força que age contra a tensão superficial, que tende a manter a superfície do líquido coesa de forma uniforme, e.g., a forma habitual do menisco. Quando a força eletrostática consegue superar a tensão superficial, o cone emite um jato eletrohidrodinâmico. Este cone pode ser visto na Figura \ref{fig:2.1}, onde o líquido é representado por $\Omega_1$ e o ambiente externo (ar) é o $\Omega_2$. Na mesma figura vemos um bocal capilar que está a um potencial elétrico $\Phi$, pelo qual entra o líquido. </p>
+									<p> Quando um líquido é submetido a um campo elétrico externo e, se este último for suficientemente intenso, pode ocorrer um cone agudo de líquido, a partir do qual, se as condições o permitirem, se forma um jato fino. Este cone é conhecido como "Cone de Taylor", em homenagem ao físico Geoffrey Ingram Taylor, que fez contribuições significativas para a compreensão deste efeito nos anos 1960 (Taylor, 1964). 
+										A formação do Cone de Taylor é uma manifestação direta da interação entre as forças eletrostáticas e as forças de tensão superficial. Em essência, sob a influência de um campo elétrico, as cargas elétricas acumulam-se na superfície do líquido. A repulsão entre as cargas semelhantes provoca uma força que age contra a tensão superficial, que tende a manter a superfície do líquido coesa de forma uniforme, em exemplo, a forma habitual do menisco. Quando a força eletrostática consegue superar a tensão superficial, o cone emite um jato eletrohidrodinâmico. Este cone pode ser visto na Figura 2.1, onde o líquido é representado por \( \Omega_1 \) e o ambiente externo (ar) é o \( \Omega_2 \). Na mesma figura vemos um bocal capilar que está a um potencial elétrico \( \Phi \) e pelo qual entra o líquido.  </p>
 
 										As forças atuantes no cone de Taylor são:
 								</section>
@@ -120,7 +113,7 @@
 							<div class="col-5 col-12-medium">
 								<figure class="image main">
 									<img src="./images/Fig2.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 2.1  Esquema das forças eletrostáticas e hidrodinâmicas a atuar na formação de um cone de Taylor.</figcaption>
+									<figcaption>Fig 2.1 Esquema das forças eletrostáticas e hidrodinâmicas a atuar na formação de um cone de Taylor.</figcaption>
 								  </figure>
 
 							</div>
@@ -133,7 +126,9 @@
 	
 								<section>
 									<h2>2.2 Equações de Governo</h2>
-									<p> Considere um domínio \( \Omega_0 \) durante um intervalo de tempo \( t \in [0, T] \). As equações de governo para a conservação de massa, quantidade de movimento, densidade de carga elétrica e campo elétrico são apresentadas a seguir:</p>
+									<p> Os jatos de cone de Taylor são considerados um problema de escoamento eletrohidrodinâmico imiscível. As equações de governo deste escoamento são uma peculiaridade da magnetohidrodinâmica (MHD) e nesta secção iremos descrever as equações de governo e as simplificações feitas para chegar à eletrohidrodinâmica (EHD). As equações de governo para o escoamento incompressível, isotérmico e não-estacionário são as equações de Navier-Stokes e a equação de continuidade. </p>
+										
+									<p>Consideramos logo de início um escoamento incompressível, isotérmico e não estacionário. Considere um domínio \( \Omega_0 \) durante um intervalo de tempo \( t \in [0, T] \). As equações de governo para a conservação de massa, quantidade de movimento, densidade de carga elétrica e campo elétrico são apresentadas a seguir:</p>
 	
 									<span style="font-weight: bold;">Conservação da Massa (Equação da Continuidade):</span>
 									\[
@@ -166,16 +161,16 @@
 	
 	
 									<ol>
-										<li>  Escoamento incompressível: Assume-se que a densidade do fluido é constante e não varia com a pressão ou outras variáveis. </li>
-										<li>  Fluidos não-miscíveis: Os diferentes fluidos (ou fases) não se misturam e mantêm uma interface distinta. </li>
-										<li>  Tensões induzidas desprezáveis: Ignora-se qualquer tensão devido a efeitos eletromagnéticos.</li>
-										<li>  Escoamento laminar: Ignora-se a turbulência e suas complexidades associadas.</li>
-										<li>  Campo elétrico estacionário: As variações temporais do campo elétrico são negligenciadas.</li>
-										<li>  Geometria fixa: A estrutura ou geometria que contém o fluido não se deforma ou move em resposta ao escoamento ou a forças externas.</li>
-										<li>  Propriedades do fluido constantes: A viscosidade e outras propriedades relevantes são consideradas constantes e não variáveis.</li>
-										<li>  Condição isotérmica: Não há variação de temperatura no domínio.</li>
-										<li>  Sem evaporação: Os fluidos não evaporam, independentemente das condições.</li>
-										<li>  Cargas elétricas constantes: As cargas elétricas no fluido são conservadas.</li>
+										<li>  Escoamento incompressível. Assume-se que a densidade do fluido é constante e não varia com a pressão ou outras variáveis. </li>
+										<li>  Fluidos não-miscíveis. Os diferentes fluidos (ou fases) não se misturam e mantêm uma interface distinta. </li>
+										<li>  Tensões induzidas desprezáveis. Despreza-se qualquer tensão devido a efeitos eletromagnéticos.</li>
+										<li>  Escoamento laminar. Despreza-se a turbulência e as suas complexidades associadas.</li>
+										<li>  Campo elétrico estacionário. As variações temporais do campo elétrico são negligenciadas.</li>
+										<li>  Geometria fixa. A estrutura ou geometria que contém o fluido não se deforma ou move em resposta ao escoamento ou a forças externas.</li>
+										<li>  Propriedades do fluido constantes. A viscosidade e outras propriedades relevantes são consideradas constantes e não variáveis.</li>
+										<li>  Condição isotérmica. Não há variação de temperatura no domínio.</li>
+										<li>  Sem evaporação. Os fluidos não evaporam, independentemente das condições.</li>
+										<li>  Cargas elétricas constantes. As cargas elétricas no fluido são conservadas.</li>
 									</ol>
 								</section>
 	
