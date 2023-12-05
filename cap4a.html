@@ -27,7 +27,14 @@
 										<a href="cap1.html" >Intro</a>
 										<a href="cap2.html" >Fundamentos</a>
 										<a href="cap3.html">Modelação</a>
-										<a href="cap4.html" class="current-page-item">Desempenho</a>
+										<div class="dropdown">
+											<a href="cap4.html" class="current-page-item">Desempenho</a>
+											<div class="dropdown-content">
+												<a href="cap4a.html">Jatos</a>
+												<a href="cap4b.html">Whipping</a>
+												<a href="cap4c.html">Plumas</a>
+											</div>
+										</div>
 										<a href="cap5.html">Aplicações</a>
 										<a href="artigos.html">Referências</a>
 									</nav>
@@ -61,7 +68,7 @@
 							<div class="col-7 col-12-medium">
 
 								<section>
-									<h2>Visualização dos Campos do Escoamento EHD</h2>
+									<h2>4.1.1. Visualização dos Campos do Escoamento EHD</h2>
 									<p>Aqui é possivél selecional uma combinação dos principais campos do escoamento bifásico EHD, para o instante da primeira emissão. Resultados para um caudal de \( 5 \) nL/s e um potencial elétrico aplicado de \( 4 \) kV.</p>
 									
 
@@ -71,10 +78,12 @@
 							<div class="col-5 col-12-medium">
 
 								<section>
-									<h4> Selecione a combinação a visualizar com os butões em baixo:</h4>
+									<h2 >Visualização dos campos:</h2>
+
+									Selecione a combinação de escalar e campo vetorial para visualizar as linhas de corrente.
 
 									<div>
-										<label for="fieldSelect">Field:</label>
+										<label for="fieldSelect">Escalar:</label>
 										<select id="fieldSelect">
 											<option value="">Select Field</option>
 											<option value="alpha">alpha</option>
@@ -82,10 +91,7 @@
 											<option value="rhoE">rhoE</option>
 											<option value="Ue">Ue</option>
 										</select>
-									</div>
-								
-									<div>
-										<label for="vectorFieldSelect">Vector Field:</label>
+										<label for="vectorFieldSelect">Linhas de corrente:</label>
 										<select id="vectorFieldSelect">
 											<option value="">Select Vector Field</option>
 											<option value="none">None</option>
@@ -109,7 +115,7 @@
 					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
 						<div class="row main-row">
 							<div class="col-12">
-								<h2 style="color: #fff;">4.2. Estabilidade e condição de funcionamento</h2>
+								<h2 style="color: #fff;">4.1.2 Estabilidade e condição de funcionamento</h2>
 
 								<figure class="image main">
 									<img src="./images/anim_iso.gif" alt="Descriptive text about the image"   class="images-post-big">
