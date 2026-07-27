@@ -24,19 +24,19 @@
 									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
 									<nav id="nav">
 										<a href="index.html" >Home</a>
-										<a href="cap1.html" >Intro</a>
-										<a href="cap2.html" >Fundamentos</a>
-										<a href="cap3.html"class="current-page-item">Modelação</a>
+										<a href="cap1.html" >Introduction</a>
+										<a href="cap2.html" >Fundamentals</a>
+										<a href="cap3.html"class="current-page-item">Modelling</a>
 										<div class="dropdown">
-											<a href="cap4.html" >Desempenho</a>
+											<a href="cap4.html" >Performance</a>
 											<div class="dropdown-content">
-												<a href="cap4a.html">Jatos</a>
+												<a href="cap4a.html">Jets</a>
 												<a href="cap4b.html">Whipping</a>
-												<a href="cap4c.html">Plumas</a>
+												<a href="cap4c.html">Plumes</a>
 											</div>
 										</div>
-										<a href="cap5.html">Aplicações</a>
-										<a href="artigos.html">Referências</a>
+										<a href="cap5.html">Applications</a>
+										<a href="artigos.html">References</a>
 									</nav>
 								</header>
 
@@ -53,17 +53,17 @@
 							<div class="col-12">
 
 								<section>
-									<h2>3. Modelação </h2>
-									<p>A modelação matemática fornece uma ferramenta crucial para a análise e previsão do comportamento dos jatos eletrohidrodinâmicos. Através da implementação de modelos teóricos em ambientes de simulação é possível investigar as características mais complexas destes jatos, como os padrões de atomização e a formação de gotas, e isto sem a necessidade de realizar experiências longas e dispendiosas.</p>
-									<p>Neste capítulo apresentamos uma abordagem para a modelação de jatos EHD utilizando como código base OpenFOAM, um conhecido software de criação de modelos de simulação numérica baseado no métodos de volumes finitos (FVM). Iremos apresentar o modelo físico-matemático subjacente à simulação, discutindo as equações fundamentais que governam o escoamento e a atomização em jatos EHD, bem como os parâmetros específicos necessários para a sua aplicação.
+									<h2>3. Modelling</h2>
+									<p>Mathematical modelling provides a crucial tool for analysing and predicting the behaviour of electrohydrodynamic jets. By implementing theoretical models in simulation environments, it is possible to investigate the most complex characteristics of these jets, such as atomization patterns and droplet formation, without the need to conduct lengthy and expensive experiments.</p>
+									<p>In this chapter, we present an approach for modelling EHD jets using OpenFOAM as the base code, a well-known numerical simulation software based on the finite volume method (FVM). We present the physical and mathematical model underlying the simulation, discussing the fundamental equations governing the flow and atomization of EHD jets, as well as the specific parameters required for their application.
 									</p>
-									<p>Também iremos descrever a metodologia utilizada para implementar este modelo no ambiente OpenFOAM, delineando os passos críticos para criar e executar a simulação, assim como os desafios associados a esta implementação. Em resumo, este capítulo apresenta uma proposta de modelo de simulação de jatos EHD baseada,</p>
+									<p>We also describe the methodology used to implement this model within the OpenFOAM environment, outlining the critical steps required to create and run the simulation, as well as the challenges associated with this implementation. In summary, this chapter presents a proposed simulation model for EHD jets based on:</p>
 									<ol>
-										<li>  Método das Volumes Finitos (FVM)  ; </li>
-										<li>  Método dos Volumes de Fluido (VoF)  ; </li>
-										<li>  Tratamento algébrico e geométrico da interface do escoamento bifásico;</li>
-										<li>  Modelo Lagrangian Tracking Particle;</li>
-										<li>  Modelo híbrido VoF-LPT.</li>
+										<li>Finite Volume Method (FVM);</li>
+										<li>Volume of Fluid Method (VoF);</li>
+										<li>Algebraic and geometric treatment of the two-phase flow interface;</li>
+										<li>Lagrangian Particle Tracking model;</li>
+										<li>Hybrid VoF-LPT model.</li>
 									</ol>
 								</section>
 
@@ -78,12 +78,12 @@
 							<div class="col-7 col-12-medium">
 
 								<section>
-									<h2>3.1. Método dos Volumes Finitos (FVM)</h2>
-									<p> A premissa básica de um método numérico que resolve as equações de governo de um problema físico-matemático é a procura da solução para o domínio computacional discretizado, que compreende um número finito de nós computacionais, tanto no espaço como no tempo. Em geral o objetivo é fornecer uma representação adequada da solução para o domínio físico contínuo. Isto diz respeito tanto à precisão como exatidão da solução numérica aproximada. Além disso, é premissa que ao aumentar o número de nós computacionais (até ao infinito) a solução numérica aproximada deve tender para da solução exata. A Figura 3.1 ilustra o que é a discretização do espaço de resolução das equações.</p>
+									<h2>3.1. Finite Volume Method (FVM)</h2>
+									<p>The basic premise of a numerical method that solves the governing equations of a physical and mathematical problem is to determine the solution within a discretized computational domain, which comprises a finite number of computational nodes in both space and time. In general, the objective is to provide an adequate representation of the solution for the continuous physical domain. This concerns both the precision and accuracy of the approximate numerical solution. Furthermore, it is assumed that as the number of computational nodes increases towards infinity, the approximate numerical solution should converge towards the exact solution. Figure 3.1 illustrates the discretization of the space in which the equations are solved.</p>
 
-									<p>O método dos volumes finitos (FVM) é o de base dese trabalho utilizando uma metodologia colocalizada numa malha computacional poliédrica, não estruturada, com elementos de malha arbitrários. As propriedades que definem a dinâmica do fluido estão centradas nos centróides do volume de controlo.</p>
+									<p>The finite volume method (FVM) forms the basis of this work, using a collocated methodology on a polyhedral, unstructured computational mesh with arbitrary mesh elements. The properties defining the fluid dynamics are located at the centroids of the control volumes.</p>
 
-									<p>O OpenFOAM utiliza o método dos volumes finitos (FVM) com uma formulação centrada nas células para resolver sistemas de equações diferenciais parciais em malhas tridimensionais estruturadas ou não estruturadas, constituídas por células convexas de forma arbitrária.  Para isso é necessário discretizar a equação de modo a transformar uma ou mais equações governantes num sistema correspondente de equações algébricas, que seja possível de resolver. Para isso devemos expressar as equações de Navier-Stokes na forma integral, para um volume de controlo \(V_c\).</p>
+									<p>OpenFOAM uses the finite volume method (FVM), with a cell-centred formulation, to solve systems of partial differential equations on structured or unstructured three-dimensional meshes composed of convex cells with arbitrary shapes. This requires discretizing the equation in order to transform one or more governing equations into a corresponding system of algebraic equations that can be solved. For this purpose, the Navier–Stokes equations must be expressed in integral form for a control volume \(V_c\).</p>
 
 
 									<div class="equation">
@@ -93,14 +93,14 @@
 									</div>
 
 
-									A estabilidade e precisão da integração temporal é dada pala condição de Courant para a hidrodinâmica e pelo tempo de relaxação elétrica, tal que,
+									The stability and accuracy of the temporal integration are governed by the Courant condition for hydrodynamics and by the electric relaxation time, such that,
 									<div class="equation">
 									\[
 									\Delta t= F_{s} \min \left[\min \left\{\frac{\varepsilon_{1}}{\sigma_{1}}, \frac{\varepsilon_{2}}{\sigma_{2}}\right\}, C_\text{max} \frac{\Delta x}{\|\mathbf{u}\|}\right]
 									\]
 									</div>
 
-									Onde \( C_{max} = 0.1\) é o número de Courant máximo permitido e \( F_s = 0.9 \) o fator de segurança. 
+									where \( C_{max} = 0.1\) is the maximum permitted Courant number and \( F_s = 0.9 \) is the safety factor.
 
 
 								</section>
@@ -109,8 +109,8 @@
 							<div class="col-5 col-12-medium">
 
 								<figure class="figure">
-									<img src="images/Discretização.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.1   Ilustração do processo de discretização do espaço contínuo em discreto, as equações de governo passam a ter a forma matricial que é discreta e correspondem aos diferentes pontos da malha computacional.  </figcaption>
+									<img src="images/Discretização.png" alt="Illustration of the discretization process from a continuous to a discrete domain"  class="images-post">
+									<figcaption>Figure 3.1. Illustration of the process of discretizing a continuous domain into a discrete domain. The governing equations are transformed into a discrete matrix form corresponding to the different points of the computational mesh.</figcaption>
 								  </figure>
 
 							</div>
@@ -124,20 +124,20 @@
 							<div class="col-7 col-12-medium">
 
 								<section>
-									<h2>3.2. Método do Volume de Fluido (VoF)</h2>
-									<p>O método do Volume de Fluido (VoF) tem como vantagem peculiar o facto de ser utilizado apenas com um único conjunto de equações para ambas as fases do escoamento, porque utiliza uma única variável de estado.  Vamos supor que o sistema de fluido bifásico preenche todo o domínio computacional \( \Omega_0 \subset \mathbb{R}^2 \), de forma que duas fases \( \Omega_{\{1,2\}} \subset \mathbb{R}^2 \) separadas por uma espessura \( \Sigma \subset \mathbb{R}^2 \) que representa a interface entre os fluidos, tal que,</p>
+									<h2>3.2. Volume of Fluid Method (VoF)</h2>
+									<p>A particular advantage of the Volume of Fluid method (VoF) is that only one set of equations is used for both phases of the flow because a single state variable is employed. Let us assume that the two-phase fluid system fills the entire computational domain \( \Omega_0 \subset \mathbb{R}^2 \), with two phases \( \Omega_{\{1,2\}} \subset \mathbb{R}^2 \) separated by a region \( \Sigma \subset \mathbb{R}^2 \), which represents the interface between the fluids, such that,</p>
 
 									\[
 									\Omega_0 = \Omega_1 (t) \cup \Omega_2 (t) \cup \Sigma (t).
 									\]
 
-									A variável de estado é incorporada como \( \alpha \), representando a fração de fase do fluxo e é definida como
+									The state variable is introduced as \( \alpha \), representing the phase fraction of the flow, and is defined as
 
 									\[
-									\alpha (t)=\left\{\begin{array}{ll}{1} & {\text { em } \Omega_{1} (t),} \\ {0} & {\text { em  } \Omega_{2} (t),} \\ {\left] 0,1 \right[ } & {\text { em } \Sigma(t)}\end{array}\right.
+									\alpha (t)=\left\{\begin{array}{ll}{1} & {\text { in } \Omega_{1} (t),} \\ {0} & {\text { in  } \Omega_{2} (t),} \\ {\left] 0,1 \right[ } & {\text { in } \Sigma(t)}\end{array}\right.
 									\]
 
-									O método VOF acrescenta uma equação de governo para o transporte desta fração de volume \(\alpha\), denominada equação de convecção, dada por:
+									The VOF method introduces an additional governing equation for the transport of this volume fraction \(\alpha\), referred to as the convection equation, given by:
 
 									<div class="equation">
 										\[
@@ -151,8 +151,8 @@
 							<div class="col-5 col-12-medium">
 
 								<figure class="figure">
-									<img src="images/VOF.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.2. Esboço do clássico problema do jato em cone de Taylor e exemplificação do método de Volume de Fluido (VoF) utilizado. O líquido no interior do capilar é conduzido por um campo elétrico externo constante. Os valores da fração de fase são representativos.
+									<img src="images/VOF.png" alt="Illustration of the Taylor cone-jet problem and the Volume of Fluid method"  class="images-post">
+									<figcaption>Figure 3.2. Sketch of the classical Taylor cone-jet problem and illustration of the Volume of Fluid method (VoF). The liquid inside the capillary is driven by a constant external electric field. The phase-fraction values are representative.
 
 									</figcaption>
 								  </figure>
@@ -168,8 +168,8 @@
 							<div class="col-7 col-12-medium">
 
 								<section>
-									<h2>3.3. Método da Particula Discreta (LPT)</h2>
-									<p>O método Lagrangiano de seguimento de partículas (LPT) segue o movimento de elementos de fluido Lagrangianos ao longo do domínio computacional. Cada elemento representa um determinado número de gotículas com propriedades idênticas, como sejam o diâmetro e a velocidade. São tratadas como massas pontuais e, portanto, não contêm volume. A posição e a velocidade são atualizadas em cada passo de tempo com base em equações diferenciais definidas para a sua trajetória e quantidade de movimento, </p>
+									<h2>3.3. Discrete Particle Method (LPT)</h2>
+									<p>The Lagrangian Particle Tracking method (LPT) follows the motion of Lagrangian fluid elements throughout the computational domain. Each element represents a given number of droplets with identical properties, such as diameter and velocity. They are treated as point masses and therefore have no volume. Their position and velocity are updated at each time step based on differential equations defined for their trajectory and momentum,</p>
 
 									\[
 									\frac{\partial \vec{x}_p}{\partial t} = \mathbf{u}_p,
@@ -179,17 +179,17 @@
 									m_p \frac{\partial \mathbf{u}_p}{\partial t} = \mathbf{F}_D + \mathbf{F}_G + \mathbf{F}_E,
 									\]
 
-									onde, \(m_p\) é a massa da partícula, que tem uma velocidade e posição \(\mathbf{u}_p\) e \(\mathbf{x}_p\). Para cada parcela são consideradas três forças atuantes. As forças são a de arrasto \(\mathbf{F}_D\), a devida ao campo gravitacional \(\mathbf{F}_G\) e a devida ao campo eletrostático \(\mathbf{F}_E\).
+									where \(m_p\) is the particle mass, while \(\mathbf{u}_p\) and \(\mathbf{x}_p\) are its velocity and position. Three acting forces are considered for each parcel: the drag force \(\mathbf{F}_D\), the force due to the gravitational field \(\mathbf{F}_G\), and the force due to the electrostatic field \(\mathbf{F}_E\).
 
 								</section>
 
 								<section>
-									<h3>3.3.1 Critérios conversão VoF-LPT</h3>
+									<h3>3.3.1 VoF-LPT Conversion Criteria</h3>
 
 									<ol>
-										<li> Diâmetro. \( d_p \le  d_\text{max} \), onde \( d_p = \sqrt[3]{\frac{6 V_p}{\pi}} \)</li>
-										<li> Esfericidade. \( \Psi_p \le 2 \), onde \( \Psi_p = \frac{2 \|\mathbf{r}_p\|_\text{max}}{d_p} \)</li>
-										<li> Carga elétrica. \( q_p \le q_R \), onde \( q_R = \left( 8 \pi \varepsilon_0 \gamma d_p^3 \right)^{1/2}\)</li>
+										<li>Diameter. \( d_p \le  d_\text{max} \), where \( d_p = \sqrt[3]{\frac{6 V_p}{\pi}} \)</li>
+										<li>Sphericity. \( \Psi_p \le 2 \), where \( \Psi_p = \frac{2 \|\mathbf{r}_p\|_\text{max}}{d_p} \)</li>
+										<li>Electric charge. \( q_p \le q_R \), where \( q_R = \left( 8 \pi \varepsilon_0 \gamma d_p^3 \right)^{1/2}\)</li>
 									</ol>
 
 
@@ -200,8 +200,8 @@
 							<div class="col-5 col-12-medium">
 
 								<figure class="figure">
-									<img src="images/LPTb.png" alt="Descriptive text about the image"  class="images-post">
-									<figcaption>Fig 3.8. (esquerda) Visualização de um plano a cortar uma gota a que voa no domínio de cálculo, colorido pela função \( \alpha \) e com as linhas brancas a mostrar a malha computacional.  (direita) Demonstração de uma gota não-esférica com uma esfericidade \( \Psi_p > 1 \) e uma gota esférica  \( \Psi_p \approx 1 \). </figcaption>
+									<img src="images/LPTb.png" alt="Comparison between a non-spherical and spherical droplet in a computational mesh"  class="images-post">
+									<figcaption>Figure 3.8. (left) Visualization of a plane intersecting a droplet moving through the computational domain, coloured by the \( \alpha \) function, with the white lines representing the computational mesh. (right) Illustration of a non-spherical droplet with a sphericity \( \Psi_p > 1 \) and a spherical droplet with \( \Psi_p \approx 1 \).</figcaption>
 								  </figure>
 
 							</div>
@@ -217,7 +217,7 @@
 						<div class="row">
 							<div class="col-12">
 								<div id="copyright">
-									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. | Design based on <a href="http://html5up.net">HTML5 UP</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a>, with modifications made by S. Cândido.
 
 								</div>
 
