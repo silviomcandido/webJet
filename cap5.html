@@ -2,227 +2,445 @@
 <!--
 	Minimaxing by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Free for personal and commercial use under the CCA 3.0 license
+	html5up.net/license
 -->
-<html>
+<html lang="pt">
 	<head>
 		<title>EletroJetFlow</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			.application-intro {
+				margin-bottom: 2.5rem;
+			}
+
+			.application-entry {
+				display: flex;
+				align-items: center;
+				gap: 2.5rem;
+				margin: 2.5rem 0 4rem 0;
+			}
+
+			.application-text {
+				flex: 1 1 58%;
+				min-width: 0;
+			}
+
+			.application-figure {
+				flex: 1 1 42%;
+				min-width: 0;
+				margin: 0;
+				text-align: center;
+			}
+
+			.application-figure img {
+				display: block;
+				width: 100%;
+				height: auto;
+				max-height: 520px;
+				object-fit: contain;
+				margin: 0 auto;
+			}
+
+			.application-figure figcaption {
+				margin-top: 0.8rem;
+				font-size: 0.9rem;
+				line-height: 1.45;
+				color: #555555;
+				text-align: left;
+			}
+
+			.numbered-points {
+				margin: 0 0 1.5rem 1.8rem;
+				padding-left: 0.8rem;
+			}
+
+			.numbered-points li {
+				margin-bottom: 0.55rem;
+				padding-left: 0.35rem;
+				line-height: 1.55;
+			}
+
+			.publication-reference {
+				margin-top: 1.5rem;
+				padding: 1rem 1.2rem;
+				background: #f5f6fa;
+				border-left: 4px solid #3758ac;
+				line-height: 1.5;
+			}
+
+			@media screen and (max-width: 980px) {
+				.application-entry {
+					display: block;
+				}
+
+				.application-figure {
+					margin-top: 1.5rem;
+				}
+
+				.application-entry.reverse .application-figure {
+					margin-bottom: 1.5rem;
+				}
+			}
+		</style>
 	</head>
+
 	<body>
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
 
-								<header id="header">
-									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
-									<nav id="nav">
-										<a href="index.html" >Home</a>
-										<a href="cap1.html" >Intro</a>
-										<a href="cap2.html" >Fundamentos</a>
-										<a href="cap3.html">Modelação</a>
-										<div class="dropdown">
-											<a href="cap4.html" >Desempenho</a>
-											<div class="dropdown-content">
-												<a href="cap4a.html">Jatos</a>
-												<a href="cap4b.html">Whipping</a>
-												<a href="cap4c.html">Plumas</a>
-											</div>
+							<header id="header">
+								<h1>
+									<a href="index.html" id="logo">EletroJetFlow</a>
+								</h1>
+
+								<nav id="nav">
+									<a href="index.html">Home</a>
+									<a href="cap1.html">Intro</a>
+									<a href="cap2.html">Fundamentos</a>
+									<a href="cap3.html">Modelação</a>
+
+									<div class="dropdown">
+										<a href="cap4.html">Desempenho</a>
+
+										<div class="dropdown-content">
+											<a href="cap4a.html">Jatos</a>
+											<a href="cap4b.html">Whipping</a>
+											<a href="cap4c.html">Plumas</a>
 										</div>
-										<a href="cap5.html" class="current-page-item">Aplicações</a>
-										<a href="artigos.html">Referências</a>
-									</nav>
-								</header>
+									</div>
 
-							</div>
+									<a href="cap5.html" class="current-page-item">
+										Aplicações
+									</a>
+
+									<a href="artigos.html">Referências</a>
+								</nav>
+							</header>
+
 						</div>
 					</div>
 				</div>
+			</div>
 
 			<!-- Main -->
-				<div id="main">
-					<div class="container">
-						<div class="row main-row">
-							<div class="col-12">
+			<div id="main">
+				<div class="container">
+					<div class="row main-row">
+						<div class="col-12">
 
-<section>
-	<h2>5. Aplicações de modelos substitutos orientados por dados</h2>
+							<section class="application-intro">
+								<h2>5. Aplicações de modelos substitutos orientados por dados</h2>
 
-	<p>
-		Esta secção apresenta três aplicações de métodos orientados por dados
-		ao estudo de escoamentos eletro-hidrodinâmicos e de processos de
-		pulverização. Os trabalhos combinam simulações de dinâmica de fluidos
-		computacional (CFD) de alta fidelidade, técnicas de decomposição modal
-		e redes neuronais, com o objetivo de reduzir o custo computacional e
-		prever a evolução de sistemas multifísicos complexos.
-	</p>
-</section>
+								<p>
+									Esta secção apresenta três aplicações de métodos
+									orientados por dados ao estudo de escoamentos
+									eletro-hidrodinâmicos e de processos de pulverização.
+									Os trabalhos combinam simulações de dinâmica de fluidos
+									computacional (CFD) de alta fidelidade, técnicas de
+									decomposição modal e redes neuronais, com o objetivo de
+									reduzir o custo computacional e prever a evolução de
+									sistemas multifísicos complexos.
+								</p>
+							</section>
 
-<section>
-	<h2>5.1. Modelação orientada por dados da dinâmica multietapa do cone-jato de Taylor</h2>
+							<!-- Aplicação 1 -->
+							<section class="application-entry">
 
-	<p>
-		Neste trabalho, foram desenvolvidos modelos substitutos capazes de
-		reproduzir a evolução temporal das diferentes etapas da dinâmica de um
-		cone-jato de Taylor. O objetivo consistiu em prever campos completos do
-		escoamento sem ser necessário executar uma nova simulação CFD
-		tridimensional para cada instante ou condição de funcionamento.
-	</p>
+								<div class="application-text">
+									<h2>
+										5.1. Modelação orientada por dados da dinâmica
+										multietapa do cone-jato de Taylor
+									</h2>
 
-	<p>
-		A metodologia utiliza dados provenientes de simulações multifásicas de
-		alta fidelidade e técnicas de redução de dimensionalidade para
-		representar a formação do cone, o alongamento do jato e o
-		desenvolvimento de instabilidades. O modelo aprende uma representação
-		compacta do sistema, a partir da qual são posteriormente reconstruídos
-		os campos físicos de interesse.
-	</p>
+									<p>
+										Neste trabalho, foram desenvolvidos modelos
+										substitutos capazes de reproduzir a evolução temporal
+										das diferentes etapas da dinâmica de um cone-jato de
+										Taylor. O objetivo consistiu em prever campos completos
+										do escoamento sem ser necessário executar uma nova
+										simulação CFD tridimensional para cada instante ou
+										condição de funcionamento.
+									</p>
 
-	<p>Esta abordagem permite:</p>
+									<p>
+										A metodologia utiliza dados provenientes de
+										simulações multifásicas de alta fidelidade e técnicas
+										de redução de dimensionalidade para representar a
+										formação do cone, o alongamento do jato e o
+										desenvolvimento de instabilidades. O modelo aprende
+										uma representação compacta do sistema, a partir da qual
+										são posteriormente reconstruídos os campos físicos de
+										interesse.
+									</p>
 
-	<ul>
-		<li>reduzir significativamente o custo de novas previsões;</li>
-		<li>reconstruir campos transientes de elevada dimensão;</li>
-		<li>identificar as diferentes etapas da evolução do cone-jato;</li>
-		<li>acelerar estudos paramétricos e processos de otimização.</li>
-	</ul>
+									<p>Esta abordagem permite:</p>
 
-	<p>
-		<strong>Publicação:</strong>
-		S. Cândido e J. C. Páscoa,
-		<em>Data-driven surrogate modelling of multistage Taylor cone–jet dynamics</em>,
-		<em>Physics of Fluids</em>, 2024.
-	</p>
-</section>
+									<ol class="numbered-points">
+										<li>
+											Reduzir significativamente o custo de novas
+											previsões.
+										</li>
+										<li>
+											Reconstruir campos transientes de elevada dimensão.
+										</li>
+										<li>
+											Identificar as diferentes etapas da evolução do
+											cone-jato.
+										</li>
+										<li>
+											Acelerar estudos paramétricos e processos de
+											otimização.
+										</li>
+									</ol>
 
-<section>
-	<h2>5.2. Decomposição modal como modelo substituto para jatos EHD</h2>
-
-	<p>
-		A decomposição modal foi investigada como uma alternativa eficiente às
-		simulações completas de jatos eletro-hidrodinâmicos. Nesta abordagem,
-		os resultados CFD são decompostos num conjunto reduzido de modos que
-		representam as estruturas espaciais dominantes do escoamento.
-	</p>
-
-	<p>
-		A evolução temporal pode ser aproximada através dos respetivos
-		coeficientes modais, permitindo reconstruir a interface líquida, o
-		campo de escoamento e outras variáveis físicas com um número reduzido
-		de graus de liberdade.
-	</p>
-
-	<p>
-		Um dos aspetos centrais deste trabalho consistiu em assegurar que o
-		modelo reduzido preservava a coerência física da simulação original,
-		incluindo a conservação da carga elétrica durante a evolução do
-		cone-jato.
-	</p>
-
-	<p>As principais vantagens desta abordagem incluem:</p>
-
-	<ul>
-		<li>a compressão de grandes conjuntos de dados CFD;</li>
-		<li>a identificação das estruturas dominantes do escoamento;</li>
-		<li>a reconstrução rápida da dinâmica transiente;</li>
-		<li>a redução do tempo necessário para análise e previsão.</li>
-	</ul>
-
-	<p>
-		<strong>Publicação:</strong>
-		S. Cândido e J. C. Páscoa,
-		<em>On modal decomposition as surrogate for charge-conservative EHD modelling of Taylor Cone jets</em>,
-		<em>International Journal of Engineering Science</em>, 2023.
-	</p>
-</section>
-
-<section>
-	<h2>5.3. Aprendizagem profunda aplicada à pintura eletrostática</h2>
-
-	<p>
-		Neste trabalho, dados provenientes de simulações CFD tridimensionais
-		foram utilizados para desenvolver modelos de aprendizagem profunda
-		destinados à previsão de escoamentos associados à pulverização
-		eletrostática.
-	</p>
-
-	<p>
-		O estudo avaliou a utilização de condutores de alta tensão e da técnica
-		<em>Nitrotherm</em>, na qual é utilizado azoto aquecido em substituição
-		do ar convencional. As simulações incluíram escoamento turbulento,
-		transporte de gotículas carregadas, campo elétrico, evaporação e
-		deposição sobre a superfície-alvo.
-	</p>
-
-	<p>
-		Foram treinados modelos baseados em redes neuronais convolucionais e
-		recorrentes, utilizando os resultados CFD para identificar os padrões
-		espaciais e temporais do spray. Uma arquitetura baseada num
-		autoencoder convolucional permitiu reconstruir os campos físicos e
-		prever as regiões de deposição recorrendo apenas a uma fração das
-		simulações originais.
-	</p>
-
-	<p>A metodologia permitiu:</p>
-
-	<ul>
-		<li>prever campos de velocidade e padrões de pulverização;</li>
-		<li>reduzir o número de simulações CFD necessárias;</li>
-		<li>avaliar rapidamente novas condições de funcionamento;</li>
-		<li>apoiar a otimização da eficiência de transferência da tinta;</li>
-		<li>
-			identificar configurações com menor pulverização excessiva
-			(<em>overspray</em>) e maior uniformidade de deposição.
-		</li>
-	</ul>
-
-	<p>
-		<strong>Publicação:</strong>
-		M.-R. Pendar, S. Cândido e J. C. Páscoa,
-		<em>
-			Optimization of painting efficiency applying unique techniques
-			of high-voltage conductors and Nitrotherm spray: Developing deep
-			learning models using computational fluid dynamics dataset
-		</em>,
-		<em>Physics of Fluids</em>, 2023.
-	</p>
-</section>
-
-						</div>
-					</div>
-				</div>
-				</div>
-
-				<!-- Footer -->
-				<div class="footer-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div id="copyright">
-									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
-
+									<p class="publication-reference">
+										<strong>Publicação:</strong><br>
+										S. Cândido e J. C. Páscoa,
+										<em>
+											Data-driven surrogate modelling of multistage
+											Taylor cone–jet dynamics
+										</em>,
+										<em>Physics of Fluids</em>, 2024.
+									</p>
 								</div>
 
-							</div>
+								<figure class="application-figure">
+									<img
+										src="./images/taylor-cone-jet-surrogate.png"
+										alt="Modelo substituto orientado por dados para a dinâmica multietapa do cone-jato de Taylor"
+									/>
+
+									<figcaption>
+										<strong>Figura 1.</strong>
+										Representação da metodologia orientada por dados
+										utilizada para reconstruir as diferentes etapas da
+										dinâmica do cone-jato de Taylor.
+									</figcaption>
+								</figure>
+
+							</section>
+
+							<!-- Aplicação 2 -->
+							<section class="application-entry reverse">
+
+								<figure class="application-figure">
+									<img
+										src="./images/modal-decomposition-ehd.png"
+										alt="Decomposição modal aplicada à modelação reduzida de jatos eletro-hidrodinâmicos"
+									/>
+
+									<figcaption>
+										<strong>Figura 2.</strong>
+										Decomposição dos resultados CFD em modos espaciais e
+										coeficientes temporais para a reconstrução reduzida da
+										dinâmica do cone-jato.
+									</figcaption>
+								</figure>
+
+								<div class="application-text">
+									<h2>
+										5.2. Decomposição modal como modelo substituto
+										para jatos EHD
+									</h2>
+
+									<p>
+										A decomposição modal foi investigada como uma
+										alternativa eficiente às simulações completas de jatos
+										eletro-hidrodinâmicos. Nesta abordagem, os resultados
+										CFD são decompostos num conjunto reduzido de modos que
+										representam as estruturas espaciais dominantes do
+										escoamento.
+									</p>
+
+									<p>
+										A evolução temporal pode ser aproximada através dos
+										respetivos coeficientes modais, permitindo reconstruir
+										a interface líquida, o campo de escoamento e outras
+										variáveis físicas com um número reduzido de graus de
+										liberdade.
+									</p>
+
+									<p>
+										Um dos aspetos centrais deste trabalho consistiu em
+										assegurar que o modelo reduzido preservava a coerência
+										física da simulação original, incluindo a conservação
+										da carga elétrica durante a evolução do cone-jato.
+									</p>
+
+									<p>As principais vantagens desta abordagem incluem:</p>
+
+									<ol class="numbered-points">
+										<li>
+											A compressão de grandes conjuntos de dados CFD.
+										</li>
+										<li>
+											A identificação das estruturas dominantes do
+											escoamento.
+										</li>
+										<li>
+											A reconstrução rápida da dinâmica transiente.
+										</li>
+										<li>
+											A redução do tempo necessário para análise e
+											previsão.
+										</li>
+									</ol>
+
+									<p class="publication-reference">
+										<strong>Publicação:</strong><br>
+										S. Cândido e J. C. Páscoa,
+										<em>
+											On modal decomposition as surrogate for
+											charge-conservative EHD modelling of Taylor Cone jets
+										</em>,
+										<em>
+											International Journal of Engineering Science
+										</em>,
+										2023.
+									</p>
+								</div>
+
+							</section>
+
+							<!-- Aplicação 3 -->
+							<section class="application-entry">
+
+								<div class="application-text">
+									<h2>
+										5.3. Aprendizagem profunda aplicada à pintura
+										eletrostática
+									</h2>
+
+									<p>
+										Neste trabalho, dados provenientes de simulações CFD
+										tridimensionais foram utilizados para desenvolver
+										modelos de aprendizagem profunda destinados à previsão
+										de escoamentos associados à pulverização
+										eletrostática.
+									</p>
+
+									<p>
+										O estudo avaliou a utilização de condutores de alta
+										tensão e da técnica <em>Nitrotherm</em>, na qual é
+										utilizado azoto aquecido em substituição do ar
+										convencional. As simulações incluíram escoamento
+										turbulento, transporte de gotículas carregadas, campo
+										elétrico, evaporação e deposição sobre a
+										superfície-alvo.
+									</p>
+
+									<p>
+										Foram treinados modelos baseados em redes neuronais
+										convolucionais e recorrentes, utilizando os resultados
+										CFD para identificar os padrões espaciais e temporais
+										da pulverização. Uma arquitetura baseada num
+										autoencoder convolucional permitiu reconstruir os
+										campos físicos e prever as regiões de deposição
+										recorrendo apenas a uma fração das simulações
+										originais.
+									</p>
+
+									<p>A metodologia permitiu:</p>
+
+									<ol class="numbered-points">
+										<li>
+											Prever campos de velocidade e padrões de
+											pulverização.
+										</li>
+										<li>
+											Reduzir o número de simulações CFD necessárias.
+										</li>
+										<li>
+											Avaliar rapidamente novas condições de
+											funcionamento.
+										</li>
+										<li>
+											Apoiar a otimização da eficiência de transferência
+											da tinta.
+										</li>
+										<li>
+											Identificar configurações com menor pulverização
+											excessiva (<em>overspray</em>) e maior uniformidade
+											de deposição.
+										</li>
+									</ol>
+
+									<p class="publication-reference">
+										<strong>Publicação:</strong><br>
+										M.-R. Pendar, S. Cândido e J. C. Páscoa,
+										<em>
+											Optimization of painting efficiency applying
+											unique techniques of high-voltage conductors and
+											Nitrotherm spray: Developing deep learning models
+											using computational fluid dynamics dataset
+										</em>,
+										<em>Physics of Fluids</em>, 2023.
+									</p>
+								</div>
+
+								<figure class="application-figure">
+									<img
+										src="./images/electrostatic-spray-deep-learning.png"
+										alt="Modelo de aprendizagem profunda aplicado à pulverização eletrostática"
+									/>
+
+									<figcaption>
+										<strong>Figura 3.</strong>
+										Arquitetura de aprendizagem profunda utilizada para
+										prever campos de velocidade e padrões de deposição a
+										partir de resultados CFD.
+									</figcaption>
+								</figure>
+
+							</section>
+
 						</div>
 					</div>
 				</div>
+			</div>
 
-	</div>
+			<!-- Footer -->
+			<div class="footer-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
 
-	<!-- Scripts -->
+							<div id="copyright">
+								&copy; 2019&ndash;2023 S. Cândido &amp; UBI.
+								All rights reserved. |
+								Design baseado em
+								<a href="https://html5up.net">HTML5 UP</a>,
+								licenciado sob
+								<a href="https://creativecommons.org/licenses/by/3.0/">
+									CC BY 3.0
+								</a>,
+								com modificações realizadas por S. Cândido.
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-</body>
+	</body>
 </html>
