@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license
 	html5up.net/license
 -->
-<html lang="pt">
+<html lang="en">
 	<head>
 		<title>EletroJetFlow</title>
 		<meta charset="utf-8" />
@@ -107,25 +107,25 @@
 
 								<nav id="nav">
 									<a href="index.html">Home</a>
-									<a href="cap1.html">Intro</a>
-									<a href="cap2.html">Fundamentos</a>
-									<a href="cap3.html">Modelação</a>
+									<a href="cap1.html">Introduction</a>
+									<a href="cap2.html">Fundamentals</a>
+									<a href="cap3.html">Modelling</a>
 
 									<div class="dropdown">
-										<a href="cap4.html">Desempenho</a>
+										<a href="cap4.html">Performance</a>
 
 										<div class="dropdown-content">
-											<a href="cap4a.html">Jatos</a>
+											<a href="cap4a.html">Jets</a>
 											<a href="cap4b.html">Whipping</a>
-											<a href="cap4c.html">Plumas</a>
+											<a href="cap4c.html">Plumes</a>
 										</div>
 									</div>
 
 									<a href="cap5.html" class="current-page-item">
-										Aplicações
+										Applications
 									</a>
 
-									<a href="artigos.html">Referências</a>
+									<a href="artigos.html">References</a>
 								</nav>
 							</header>
 
@@ -141,73 +141,69 @@
 						<div class="col-12">
 
 							<section class="application-intro">
-								<h2>5. Aplicações de modelos substitutos orientados por dados</h2>
+								<h2>5. Applications of Data-Driven Surrogate Models</h2>
 
 								<p>
-									Esta secção apresenta três aplicações de métodos
-									orientados por dados ao estudo de escoamentos
-									eletro-hidrodinâmicos e de processos de pulverização.
-									Os trabalhos combinam simulações de dinâmica de fluidos
-									computacional (CFD) de alta fidelidade, técnicas de
-									decomposição modal e redes neuronais, com o objetivo de
-									reduzir o custo computacional e prever a evolução de
-									sistemas multifísicos complexos.
+									This section presents three applications of data-driven
+									methods to the study of electrohydrodynamic flows and
+									spray processes. These studies combine high-fidelity
+									computational fluid dynamics (CFD) simulations, modal
+									decomposition techniques and neural networks to reduce
+									computational cost and predict the evolution of complex
+									multiphysics systems.
 								</p>
 							</section>
 
-							<!-- Aplicação 1 -->
+							<!-- Application 1 -->
 							<section class="application-entry">
 
 								<div class="application-text">
 									<h2>
-										5.1. Modelação orientada por dados da dinâmica
-										multietapa do cone-jato de Taylor
+										5.1. Data-Driven Modelling of Multistage
+										Taylor Cone-Jet Dynamics
 									</h2>
 
 									<p>
-										Neste trabalho, foram desenvolvidos modelos
-										substitutos capazes de reproduzir a evolução temporal
-										das diferentes etapas da dinâmica de um cone-jato de
-										Taylor. O objetivo consistiu em prever campos completos
-										do escoamento sem ser necessário executar uma nova
-										simulação CFD tridimensional para cada instante ou
-										condição de funcionamento.
+										In this work, surrogate models were developed to
+										reproduce the temporal evolution of the different
+										stages of Taylor cone-jet dynamics. The objective was
+										to predict complete flow fields without performing a
+										new three-dimensional CFD simulation for every time
+										step or operating condition.
 									</p>
 
 									<p>
-										A metodologia utiliza dados provenientes de
-										simulações multifásicas de alta fidelidade e técnicas
-										de redução de dimensionalidade para representar a
-										formação do cone, o alongamento do jato e o
-										desenvolvimento de instabilidades. O modelo aprende
-										uma representação compacta do sistema, a partir da qual
-										são posteriormente reconstruídos os campos físicos de
-										interesse.
+										The methodology uses data obtained from high-fidelity
+										multiphase simulations and dimensionality-reduction
+										techniques to represent cone formation, jet elongation
+										and the development of instabilities. The model learns
+										a compact representation of the system, from which the
+										physical fields of interest are subsequently
+										reconstructed.
 									</p>
 
-									<p>Esta abordagem permite:</p>
+									<p>This approach makes it possible to:</p>
 
 									<ol class="numbered-points">
 										<li>
-											Reduzir significativamente o custo de novas
-											previsões.
+											Significantly reduce the cost of new predictions.
 										</li>
 										<li>
-											Reconstruir campos transientes de elevada dimensão.
+											Reconstruct high-dimensional transient fields.
 										</li>
 										<li>
-											Identificar as diferentes etapas da evolução do
-											cone-jato.
+											Identify the different stages of cone-jet
+											evolution.
 										</li>
 										<li>
-											Acelerar estudos paramétricos e processos de
-											otimização.
+											Accelerate parametric studies and optimization
+											processes.
 										</li>
 									</ol>
 
 									<p class="publication-reference">
-										<strong>Publicação:</strong><br>
-										S. Cândido e J. C. Páscoa,
+										<strong>Publication:</strong><br>
+										S. Cândido and J. C. Páscoa,
 										<em>
 											Data-driven surrogate modelling of multistage
 											Taylor cone–jet dynamics
@@ -219,88 +215,88 @@
 								<figure class="application-figure">
 									<img
 										src="./images/taylor-cone-jet-surrogate.png"
-										alt="Modelo substituto orientado por dados para a dinâmica multietapa do cone-jato de Taylor"
+										alt="Data-driven surrogate model for multistage Taylor cone-jet dynamics"
 									/>
 
 									<figcaption>
-										<strong>Figura 1.</strong>
-										Representação da metodologia orientada por dados
-										utilizada para reconstruir as diferentes etapas da
-										dinâmica do cone-jato de Taylor.
+										<strong>Figure 1.</strong>
+										Representation of the data-driven methodology used
+										to reconstruct the different stages of Taylor
+										cone-jet dynamics.
 									</figcaption>
 								</figure>
 
 							</section>
 
-							<!-- Aplicação 2 -->
+							<!-- Application 2 -->
 							<section class="application-entry reverse">
 
 								<figure class="application-figure">
 									<img
 										src="./images/modal-decomposition-ehd.PNG"
-										alt="Decomposição modal aplicada à modelação reduzida de jatos eletro-hidrodinâmicos"
+										alt="Modal decomposition applied to reduced-order modelling of electrohydrodynamic jets"
 									/>
 
 									<figcaption>
-										<strong>Figura 2.</strong>
-										Decomposição dos resultados CFD em modos espaciais e
-										coeficientes temporais para a reconstrução reduzida da
-										dinâmica do cone-jato.
+										<strong>Figure 2.</strong>
+										Decomposition of CFD results into spatial modes and
+										temporal coefficients for reduced-order reconstruction
+										of the cone-jet dynamics.
 									</figcaption>
 								</figure>
 
 								<div class="application-text">
 									<h2>
-										5.2. Decomposição modal como modelo substituto
-										para jatos EHD
+										5.2. Modal Decomposition as a Surrogate Model
+										for EHD Jets
 									</h2>
 
 									<p>
-										A decomposição modal foi investigada como uma
-										alternativa eficiente às simulações completas de jatos
-										eletro-hidrodinâmicos. Nesta abordagem, os resultados
-										CFD são decompostos num conjunto reduzido de modos que
-										representam as estruturas espaciais dominantes do
-										escoamento.
+										Modal decomposition was investigated as an efficient
+										alternative to full simulations of
+										electrohydrodynamic jets. In this approach, the CFD
+										results are decomposed into a reduced set of modes
+										representing the dominant spatial structures of the
+										flow.
 									</p>
 
 									<p>
-										A evolução temporal pode ser aproximada através dos
-										respetivos coeficientes modais, permitindo reconstruir
-										a interface líquida, o campo de escoamento e outras
-										variáveis físicas com um número reduzido de graus de
-										liberdade.
+										The temporal evolution can be approximated through
+										the corresponding modal coefficients, allowing the
+										liquid interface, flow field and other physical
+										variables to be reconstructed using a reduced number
+										of degrees of freedom.
 									</p>
 
 									<p>
-										Um dos aspetos centrais deste trabalho consistiu em
-										assegurar que o modelo reduzido preservava a coerência
-										física da simulação original, incluindo a conservação
-										da carga elétrica durante a evolução do cone-jato.
+										One of the central aspects of this work was ensuring
+										that the reduced-order model preserved the physical
+										consistency of the original simulation, including the
+										conservation of electric charge throughout the
+										cone-jet evolution.
 									</p>
 
-									<p>As principais vantagens desta abordagem incluem:</p>
+									<p>The main advantages of this approach include:</p>
 
 									<ol class="numbered-points">
 										<li>
-											A compressão de grandes conjuntos de dados CFD.
+											Compression of large CFD datasets.
 										</li>
 										<li>
-											A identificação das estruturas dominantes do
-											escoamento.
+											Identification of the dominant flow structures.
 										</li>
 										<li>
-											A reconstrução rápida da dinâmica transiente.
+											Rapid reconstruction of transient dynamics.
 										</li>
 										<li>
-											A redução do tempo necessário para análise e
-											previsão.
+											Reduction of the time required for analysis and
+											prediction.
 										</li>
 									</ol>
 
 									<p class="publication-reference">
-										<strong>Publicação:</strong><br>
-										S. Cândido e J. C. Páscoa,
+										<strong>Publication:</strong><br>
+										S. Cândido and J. C. Páscoa,
 										<em>
 											On modal decomposition as surrogate for
 											charge-conservative EHD modelling of Taylor Cone jets
@@ -314,72 +310,66 @@
 
 							</section>
 
-							<!-- Aplicação 3 -->
+							<!-- Application 3 -->
 							<section class="application-entry">
 
 								<div class="application-text">
 									<h2>
-										5.3. Aprendizagem profunda aplicada à pintura
-										eletrostática
+										5.3. Deep Learning Applied to Electrostatic
+										Painting
 									</h2>
 
 									<p>
-										Neste trabalho, dados provenientes de simulações CFD
-										tridimensionais foram utilizados para desenvolver
-										modelos de aprendizagem profunda destinados à previsão
-										de escoamentos associados à pulverização
-										eletrostática.
+										In this work, data obtained from three-dimensional
+										CFD simulations were used to develop deep-learning
+										models for predicting flows associated with
+										electrostatic spraying.
 									</p>
 
 									<p>
-										O estudo avaliou a utilização de condutores de alta
-										tensão e da técnica <em>Nitrotherm</em>, na qual é
-										utilizado azoto aquecido em substituição do ar
-										convencional. As simulações incluíram escoamento
-										turbulento, transporte de gotículas carregadas, campo
-										elétrico, evaporação e deposição sobre a
-										superfície-alvo.
+										The study evaluated the use of high-voltage
+										conductors and the <em>Nitrotherm</em> technique, in
+										which heated nitrogen is used instead of conventional
+										air. The simulations included turbulent flow,
+										transport of charged droplets, the electric field,
+										evaporation and deposition on the target surface.
 									</p>
 
 									<p>
-										Foram treinados modelos baseados em redes neuronais
-										convolucionais e recorrentes, utilizando os resultados
-										CFD para identificar os padrões espaciais e temporais
-										da pulverização. Uma arquitetura baseada num
-										autoencoder convolucional permitiu reconstruir os
-										campos físicos e prever as regiões de deposição
-										recorrendo apenas a uma fração das simulações
-										originais.
+										Models based on convolutional and recurrent neural
+										networks were trained using the CFD results to
+										identify the spatial and temporal patterns of the
+										spray. An architecture based on a convolutional
+										autoencoder made it possible to reconstruct the
+										physical fields and predict deposition regions using
+										only a fraction of the original simulations.
 									</p>
 
-									<p>A metodologia permitiu:</p>
+									<p>The methodology made it possible to:</p>
 
 									<ol class="numbered-points">
 										<li>
-											Prever campos de velocidade e padrões de
-											pulverização.
+											Predict velocity fields and spray patterns.
 										</li>
 										<li>
-											Reduzir o número de simulações CFD necessárias.
+											Reduce the number of required CFD simulations.
 										</li>
 										<li>
-											Avaliar rapidamente novas condições de
-											funcionamento.
+											Rapidly evaluate new operating conditions.
 										</li>
 										<li>
-											Apoiar a otimização da eficiência de transferência
-											da tinta.
+											Support the optimization of paint transfer
+											efficiency.
 										</li>
 										<li>
-											Identificar configurações com menor pulverização
-											excessiva (<em>overspray</em>) e maior uniformidade
-											de deposição.
+											Identify configurations with reduced overspray and
+											improved deposition uniformity.
 										</li>
 									</ol>
 
 									<p class="publication-reference">
-										<strong>Publicação:</strong><br>
-										M.-R. Pendar, S. Cândido e J. C. Páscoa,
+										<strong>Publication:</strong><br>
+										M.-R. Pendar, S. Cândido and J. C. Páscoa,
 										<em>
 											Optimization of painting efficiency applying
 											unique techniques of high-voltage conductors and
@@ -393,14 +383,13 @@
 								<figure class="application-figure">
 									<img
 										src="./images/electrostatic-spray-deep-learning.png"
-										alt="Modelo de aprendizagem profunda aplicado à pulverização eletrostática"
+										alt="Deep-learning model applied to electrostatic spraying"
 									/>
 
 									<figcaption>
-										<strong>Figura 3.</strong>
-										Arquitetura de aprendizagem profunda utilizada para
-										prever campos de velocidade e padrões de deposição a
-										partir de resultados CFD.
+										<strong>Figure 3.</strong>
+										Deep-learning architecture used to predict velocity
+										fields and deposition patterns from CFD results.
 									</figcaption>
 								</figure>
 
@@ -420,13 +409,13 @@
 							<div id="copyright">
 								&copy; 2019&ndash;2023 S. Cândido &amp; UBI.
 								All rights reserved. |
-								Design baseado em
+								Design based on
 								<a href="https://html5up.net">HTML5 UP</a>,
-								licenciado sob
+								licensed under
 								<a href="https://creativecommons.org/licenses/by/3.0/">
 									CC BY 3.0
 								</a>,
-								com modificações realizadas por S. Cândido.
+								with modifications made by S. Cândido.
 							</div>
 
 						</div>
