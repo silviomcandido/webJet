@@ -160,73 +160,64 @@ input, select, textarea {
 	@-ms-viewport {
 		width: device-width;
 	}
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	background-color: #0c2340;
+	color: #222222;
+	line-height: 1.65;
+	letter-spacing: normal;
+	text-align: justify;
+	hyphens: auto;
+}
 
-	body {
-		font-size: 14.5pt;
-		font-family: sans-serif;
-		background-color: #0c2340;
-		font-family: 'Ubuntu Condensed', sans-serif;
-		color: #000000;
-		letter-spacing: -1px;
-		text-align: justify;
-		hyphens: auto; /* This will automatically add hyphens where appropriate */
-	}
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	color: #3758ac;
+	font-weight: normal;
+	line-height: 1.2;
+}
 
-	h1, h2, h3, h4 {
-		color: #3758ac;
-		font-weight: normal;
-	}
+h1 {
+	font-size: 2.2rem;
+	text-transform: none;
+}
 
-	h1 {
-		text-transform: none;
-	}
+h2 {
+	font-size: 1.75rem;
+	letter-spacing: normal;
+	margin-bottom: 0.8em;
+}
 
-	h2 {
-		text-transform: none;
-		font-size: 1.6em;
-		letter-spacing: -1px;
-		margin-bottom: 1em;
-	}
+h3 {
+	font-size: 1.3rem;
+	margin-bottom: 0.7em;
+}
 
-	h3, h4 {
-		color: #3758ac;
-		margin-bottom: 0.5em;
-	}
+h4 {
+	font-size: 1.1rem;
+	margin-bottom: 0.5em;
+}
 
-	h3 a {
-		color: #3758ac; /* Color of the link */
-		text-decoration: none; /* Removes underline from the link */
-	}
-	
-	/* Hover effect for the link */
-	h3 a:hover {
-		text-decoration: none; /* Adds underline on hover */
-	}
+label {
+	color: #3758ac;
+	font-size: 1rem;
+	font-weight: 600;
+}
 
-	
-	h2 a {
-		color: #3758ac; /* Color of the link */
-		text-decoration: none; /* Removes underline from the link */
-	}
-	
-	/* Hover effect for the link */
-	h2 a:hover {
-		text-decoration: none; /* Adds underline on hover */
-	}
+h2 a,
+h3 a {
+	color: inherit;
+	text-decoration: none;
+}
 
-	h3 {
-		font-size: 1.2em;
-		margin-bottom: 0.8em;
-	}
-
-	label {
-		color: #3758ac;
-		font-size: 1.2em;
-	}
-
-	h4 {
-		font-size: 1em;
-	}
+h2 a:hover,
+h3 a:hover {
+	text-decoration: underline;
+}
 
 	p, ul {
 		margin-bottom: 1.25em;
