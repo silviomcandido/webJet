@@ -24,19 +24,19 @@
 									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
 									<nav id="nav">
 										<a href="index.html" >Home</a>
-										<a href="cap1.html" >Intro</a>
-										<a href="cap2.html" >Fundamentos</a>
-										<a href="cap3.html">Modelação</a>
+										<a href="cap1.html" >Introduction</a>
+										<a href="cap2.html" >Fundamentals</a>
+										<a href="cap3.html">Modelling</a>
 										<div class="dropdown">
-											<a href="cap4.html" class="current-page-item">Desempenho</a>
+											<a href="cap4.html" class="current-page-item">Performance</a>
 											<div class="dropdown-content">
-												<a href="cap4a.html">Jatos</a>
+												<a href="cap4a.html">Jets</a>
 												<a href="cap4b.html">Whipping</a>
-												<a href="cap4c.html">Plumas</a>
+												<a href="cap4c.html">Plumes</a>
 											</div>
 										</div>
-										<a href="cap5.html">Aplicações</a>
-										<a href="artigos.html">Referências</a>
+										<a href="cap5.html">Applications</a>
+										<a href="artigos.html">References</a>
 									</nav>
 								</header>
 
@@ -52,9 +52,8 @@
 							<div class="col-12">
 
 								<section>
-									<h2>4.1. Jatos Axissimétricos</h2>
-									<p> Os estudos iniciais deste trabalho são focados nos jatos eletrohidrodinâmicos estáveis de forma radial. Isto significa que queremos calcular o escoamento de jatos por cone de Taylor axissimétricos. Este tipo de jato é formado quando as condições de caudal de entrada e de potencial elétrico aplicado estão dentro de uma janela de operação estável, no sentido radial, significando que a única instabilidade de jatos líquidos com os quais estaremos a lidar dever-se-á à tensão superficial e não ao bending. Neste sentido, quando nos referimos ao caso de Jato Axissimétrico estamos a falar da modelação computacional dos testes experimentais de [30], as condições exatas destes estudos são replicadas 
-										computacionalmente. Este caso foi escolhido pois com ele é possível validar o modelo eletrohidrodinâmico na quebra do jato através da comparação direta com as leis de escala do diâmetro das gotas geradas. A figura seguinte mostra um jato nesta condição específica. Um jato axissimétrico tem a forma característica da figura </p>
+									<h2>4.1. Axisymmetric Jets</h2>
+									<p>The initial studies in this work focus on electrohydrodynamic jets that are radially stable. This means that the objective is to calculate the flow of axisymmetric Taylor cone-jets. This type of jet forms when the inlet flow-rate conditions and the applied electric potential lie within a radially stable operating window. Therefore, the only liquid-jet instability considered is caused by surface tension rather than bending. In this context, the axisymmetric jet case refers to the computational modelling of the experimental tests reported in [30], whose exact operating conditions are reproduced numerically. This case was selected because it enables validation of the electrohydrodynamic model for jet breakup through direct comparison with scaling laws for the diameter of the generated droplets. The following figure shows a jet under these specific conditions. An axisymmetric jet has the characteristic shape shown in the figure.</p>
 										
 								</section>
 								<br>
@@ -68,8 +67,8 @@
 							<div class="col-7 col-12-medium">
 
 								<section>
-									<h2>4.1.1. Visualização dos Campos do Escoamento EHD</h2>
-									<p>Aqui é possível selecionar uma combinação dos principais campos do escoamento bifásico EHD, para o instante da primeira emissão. Resultados para um caudal de \( 5 \) nL/s e um potencial elétrico aplicado de \( 4 \) kV.</p>
+									<h2>4.1.1. Visualization of the EHD Flow Fields</h2>
+									<p>Here, it is possible to select a combination of the main fields of the two-phase EHD flow at the instant of the first emission. The results correspond to a flow rate of \( 5 \) nL/s and an applied electric potential of \( 4 \) kV.</p>
 									
 
 								</section>
@@ -78,12 +77,12 @@
 							<div class="col-5 col-12-medium">
 
 								<section>
-									<h2 >Visualização dos campos:</h2>
+									<h2 >Field visualization:</h2>
 
-									<b>Selecione a combinação de escalar e campo vetorial para visualizar as linhas de corrente.</b>
+									<b>Select the combination of scalar and vector fields used to visualize the streamlines.</b>
 
 									<div>
-										<label for="fieldSelect">Escalar:</label>
+										<label for="fieldSelect">Scalar:</label>
 										<select id="fieldSelect">
 											<option value="">Select Field</option>
 											<option value="alpha">alpha</option>
@@ -91,7 +90,7 @@
 											<option value="rhoE">rhoE</option>
 											<option value="Ue">Ue</option>
 										</select>
-										<label for="vectorFieldSelect">Linhas de corrente:</label>
+										<label for="vectorFieldSelect">Streamlines:</label>
 										<select id="vectorFieldSelect">
 											<option value="">Select Vector Field</option>
 											<option value="none">None</option>
@@ -115,11 +114,11 @@
 					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
 						<div class="row main-row">
 							<div class="col-12">
-								<h2 style="color: #fff;">4.1.2 Estabilidade e condição de funcionamento</h2>
+								<h2 style="color: #fff;">4.1.2 Stability and Operating Conditions</h2>
 
 								<figure class="image main">
 									<img src="./images/anim_iso.gif" alt="Descriptive text about the image"   class="images-post-big">
-									<figcaption>Fig 1. Description of the figure.</figcaption>
+									<figcaption>Figure 1. Description of the figure.</figcaption>
 								  </figure>
 
 							</div>
@@ -134,7 +133,7 @@
 						<div class="row">
 							<div class="col-12">
 								<div id="copyright">
-									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. | Design based on <a href="http://html5up.net">HTML5 UP</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a>, with modifications made by S. Cândido.
 
 								</div>
 
