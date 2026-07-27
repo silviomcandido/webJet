@@ -1,121 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Minimaxing by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EletroJetFlow</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<header id="header">
+									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
+									<nav id="nav">
+										<a href="index.html" >Home</a>
+										<a href="cap1.html" >Intro</a>
+										<a href="cap2.html" >Fundamentos</a>
+										<a href="cap3.html">Modelação</a>
+										<div class="dropdown">
+											<a href="cap4.html" class="current-page-item">Desempenho</a>
+											<div class="dropdown-content">
+												<a href="cap4a.html">Jatos</a>
+												<a href="cap4b.html">Whipping</a>
+												<a href="cap4c.html">Plumas</a>
+											</div>
+										</div>
+										<a href="cap5.html">Aplicações</a>
+										<a href="artigos.html">Referências</a>
+									</nav>
+								</header>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main">
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-12">
+
 <section>
-	<h2>5. Aplicações dos jatos eletrohidrodinâmicos</h2>
+	<h2>5. Aplicações de modelos substitutos orientados por dados</h2>
 
 	<p>
-		Os jatos eletrohidrodinâmicos permitem controlar líquidos à microescala
-		através da aplicação de campos elétricos intensos. Dependendo das
-		propriedades do fluido, da geometria do emissor, do caudal e do potencial
-		elétrico aplicado, o sistema pode produzir fibras, gotículas carregadas
-		ou feixes de partículas com dimensões micrométricas e nanométricas.
-	</p>
-
-	<p>
-		Estas características tornam os jatos EHD relevantes em áreas como
-		revestimentos, produção de materiais funcionais, medicina, fabricação
-		avançada e propulsão espacial.
+		Esta secção apresenta três aplicações de métodos orientados por dados
+		ao estudo de escoamentos eletro-hidrodinâmicos e de processos de
+		pulverização. Os trabalhos combinam simulações de dinâmica de fluidos
+		computacional (CFD) de alta fidelidade, técnicas de decomposição modal
+		e redes neuronais, com o objetivo de reduzir o custo computacional e
+		prever a evolução de sistemas multifísicos complexos.
 	</p>
 </section>
 
 <section>
-	<h2>5.1. Electrospray e atomização eletrohidrodinâmica</h2>
+	<h2>5.1. Modelação orientada por dados da dinâmica multietapa do cone-jato de Taylor</h2>
 
 	<p>
-		No processo de <em>electrospray</em>, um líquido eletricamente condutor
-		é submetido a um campo elétrico suficientemente elevado para formar um
-		cone de Taylor. A partir da extremidade do cone é emitido um jato fino,
-		que posteriormente se desintegra em gotículas eletricamente carregadas.
+		Neste trabalho, foram desenvolvidos modelos substitutos capazes de
+		reproduzir a evolução temporal das diferentes etapas da dinâmica de um
+		cone-jato de Taylor. O objetivo consistiu em prever campos completos do
+		escoamento sem ser necessário executar uma nova simulação CFD
+		tridimensional para cada instante ou condição de funcionamento.
 	</p>
 
 	<p>
-		O tamanho e a distribuição das gotículas dependem de parâmetros como
-		o caudal, a tensão aplicada, a condutividade elétrica, a viscosidade,
-		a tensão superficial e a distância entre o emissor e o coletor.
-		O controlo destes parâmetros permite produzir sprays mais uniformes,
-		com elevada precisão espacial e reduzido desperdício de material.
+		A metodologia utiliza dados provenientes de simulações multifásicas de
+		alta fidelidade e técnicas de redução de dimensionalidade para
+		representar a formação do cone, o alongamento do jato e o
+		desenvolvimento de instabilidades. O modelo aprende uma representação
+		compacta do sistema, a partir da qual são posteriormente reconstruídos
+		os campos físicos de interesse.
 	</p>
 
-	<p>
-		As principais aplicações incluem:
-	</p>
+	<p>Esta abordagem permite:</p>
 
 	<ul>
-		<li>revestimentos e pintura eletrostática;</li>
-		<li>deposição de filmes finos e nanopartículas;</li>
-		<li>administração controlada de fármacos;</li>
-		<li>produção de aerossóis e partículas funcionais;</li>
-		<li>espetrometria de massa por ionização por electrospray;</li>
-		<li>pulverização agrícola e desinfeção de superfícies.</li>
-	</ul>
-</section>
-
-<section>
-	<h2>5.2. Electrospinning e produção de nanofibras</h2>
-
-	<p>
-		O <em>electrospinning</em> utiliza a ação de forças elétricas para
-		estirar um jato de solução polimérica até à formação de fibras
-		extremamente finas. Após a emissão a partir do cone de Taylor, o jato
-		pode desenvolver instabilidades tridimensionais de
-		<em>bending</em> e <em>whipping</em>, que provocam um alongamento
-		adicional e reduzem significativamente o diâmetro final das fibras.
-	</p>
-
-	<p>
-		As fibras produzidas podem apresentar diâmetros desde alguns
-		micrómetros até poucas dezenas de nanómetros. A morfologia final é
-		determinada pelas propriedades reológicas e elétricas da solução,
-		pelas condições ambientais e pelos parâmetros de operação.
-	</p>
-
-	<p>
-		Entre as aplicações do <em>electrospinning</em> destacam-se:
-	</p>
-
-	<ul>
-		<li>membranas para filtração de partículas e aerossóis;</li>
-		<li>andaimes para engenharia de tecidos;</li>
-		<li>pensos e materiais para cicatrização de feridas;</li>
-		<li>sensores e materiais eletrónicos flexíveis;</li>
-		<li>elétrodos para baterias e supercondensadores;</li>
-		<li>materiais funcionais com elevada área superficial.</li>
-	</ul>
-</section>
-
-<section>
-	<h2>5.3. Propulsão espacial por electrospray</h2>
-
-	<p>
-		Os propulsores por <em>electrospray</em> utilizam campos elétricos
-		para extrair e acelerar iões, gotículas carregadas ou uma combinação
-		de ambos a partir de líquidos condutores, frequentemente líquidos
-		iónicos. As partículas são aceleradas eletrostaticamente, produzindo
-		uma força de reação que gera o impulso.
-	</p>
-
-	<p>
-		Embora o impulso produzido por cada emissor seja reduzido, estes
-		sistemas apresentam elevada precisão, resposta rápida e elevado
-		impulso específico. A utilização de matrizes com múltiplos emissores
-		permite aumentar o impulso total e adaptar o sistema às necessidades
-		de pequenos satélites.
-	</p>
-
-	<p>
-		Estes propulsores são particularmente adequados para:
-	</p>
-
-	<ul>
-		<li>controlo de atitude de pequenos satélites;</li>
-		<li>manutenção precisa de órbita;</li>
-		<li>formações de satélites;</li>
-		<li>compensação de arrasto atmosférico;</li>
-		<li>missões científicas que exigem controlo de força de alta precisão.</li>
+		<li>reduzir significativamente o custo de novas previsões;</li>
+		<li>reconstruir campos transientes de elevada dimensão;</li>
+		<li>identificar as diferentes etapas da evolução do cone-jato;</li>
+		<li>acelerar estudos paramétricos e processos de otimização.</li>
 	</ul>
 
 	<p>
-		A modelação numérica destes sistemas requer a resolução acoplada do
-		campo elétrico, transporte de carga, dinâmica do líquido, emissão de
-		partículas e interação entre as partículas carregadas e o plasma ou
-		o meio envolvente.
+		<strong>Publicação:</strong>
+		S. Cândido e J. C. Páscoa,
+		<em>Data-driven surrogate modelling of multistage Taylor cone–jet dynamics</em>,
+		<em>Physics of Fluids</em>, 2024.
 	</p>
 </section>
+
+<section>
+	<h2>5.2. Decomposição modal como modelo substituto para jatos EHD</h2>
+
+	<p>
+		A decomposição modal foi investigada como uma alternativa eficiente às
+		simulações completas de jatos eletro-hidrodinâmicos. Nesta abordagem,
+		os resultados CFD são decompostos num conjunto reduzido de modos que
+		representam as estruturas espaciais dominantes do escoamento.
+	</p>
+
+	<p>
+		A evolução temporal pode ser aproximada através dos respetivos
+		coeficientes modais, permitindo reconstruir a interface líquida, o
+		campo de escoamento e outras variáveis físicas com um número reduzido
+		de graus de liberdade.
+	</p>
+
+	<p>
+		Um dos aspetos centrais deste trabalho consistiu em assegurar que o
+		modelo reduzido preservava a coerência física da simulação original,
+		incluindo a conservação da carga elétrica durante a evolução do
+		cone-jato.
+	</p>
+
+	<p>As principais vantagens desta abordagem incluem:</p>
+
+	<ul>
+		<li>a compressão de grandes conjuntos de dados CFD;</li>
+		<li>a identificação das estruturas dominantes do escoamento;</li>
+		<li>a reconstrução rápida da dinâmica transiente;</li>
+		<li>a redução do tempo necessário para análise e previsão.</li>
+	</ul>
+
+	<p>
+		<strong>Publicação:</strong>
+		S. Cândido e J. C. Páscoa,
+		<em>On modal decomposition as surrogate for charge-conservative EHD modelling of Taylor Cone jets</em>,
+		<em>International Journal of Engineering Science</em>, 2023.
+	</p>
+</section>
+
+<section>
+	<h2>5.3. Aprendizagem profunda aplicada à pintura eletrostática</h2>
+
+	<p>
+		Neste trabalho, dados provenientes de simulações CFD tridimensionais
+		foram utilizados para desenvolver modelos de aprendizagem profunda
+		destinados à previsão de escoamentos associados à pulverização
+		eletrostática.
+	</p>
+
+	<p>
+		O estudo avaliou a utilização de condutores de alta tensão e da técnica
+		<em>Nitrotherm</em>, na qual é utilizado azoto aquecido em substituição
+		do ar convencional. As simulações incluíram escoamento turbulento,
+		transporte de gotículas carregadas, campo elétrico, evaporação e
+		deposição sobre a superfície-alvo.
+	</p>
+
+	<p>
+		Foram treinados modelos baseados em redes neuronais convolucionais e
+		recorrentes, utilizando os resultados CFD para identificar os padrões
+		espaciais e temporais do spray. Uma arquitetura baseada num
+		autoencoder convolucional permitiu reconstruir os campos físicos e
+		prever as regiões de deposição recorrendo apenas a uma fração das
+		simulações originais.
+	</p>
+
+	<p>A metodologia permitiu:</p>
+
+	<ul>
+		<li>prever campos de velocidade e padrões de pulverização;</li>
+		<li>reduzir o número de simulações CFD necessárias;</li>
+		<li>avaliar rapidamente novas condições de funcionamento;</li>
+		<li>apoiar a otimização da eficiência de transferência da tinta;</li>
+		<li>
+			identificar configurações com menor pulverização excessiva
+			(<em>overspray</em>) e maior uniformidade de deposição.
+		</li>
+	</ul>
+
+	<p>
+		<strong>Publicação:</strong>
+		M.-R. Pendar, S. Cândido e J. C. Páscoa,
+		<em>
+			Optimization of painting efficiency applying unique techniques
+			of high-voltage conductors and Nitrotherm spray: Developing deep
+			learning models using computational fluid dynamics dataset
+		</em>,
+		<em>Physics of Fluids</em>, 2023.
+	</p>
+</section>
+
+						</div>
+					</div>
+				</div>
+				</div>
+
+				<!-- Footer -->
+				<div class="footer-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div id="copyright">
+									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+</body>
+</html>
