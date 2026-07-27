@@ -24,19 +24,19 @@
 									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
 									<nav id="nav">
 										<a href="index.html" >Home</a>
-										<a href="cap1.html" >Intro</a>
-										<a href="cap2.html" >Fundamentos</a>
-										<a href="cap3.html">Modelação</a>
+										<a href="cap1.html" >Introduction</a>
+										<a href="cap2.html" >Fundamentals</a>
+										<a href="cap3.html">Modelling</a>
 										<div class="dropdown">
-											<a href="cap4.html" class="current-page-item">Desempenho</a>
+											<a href="cap4.html" class="current-page-item">Performance</a>
 											<div class="dropdown-content">
-												<a href="cap4a.html">Jatos</a>
+												<a href="cap4a.html">Jets</a>
 												<a href="cap4b.html">Whipping</a>
-												<a href="cap4c.html">Plumas</a>
+												<a href="cap4c.html">Plumes</a>
 											</div>
 										</div>
-										<a href="cap5.html">Aplicações</a>
-										<a href="artigos.html">Referências</a>
+										<a href="cap5.html">Applications</a>
+										<a href="artigos.html">References</a>
 									</nav>
 								</header>
 
@@ -52,9 +52,9 @@
 							<div class="col-12">
 
 								<section>
-									<h2>4.3. Formação de plumas</h2>
-									<p>A simulação numérica das gotículas é muito complexa em métodos VoF, mesmo com a abordagem de refinamento adaptativo da malha de cálculo. Este facto deve-se à resolução de malha necessária para captar bem a interface. Para as gotículas mais pequenas não há deformação significativa, e onde a esfericidade da gota é aproximadamente 1. Isto significa que estas gotículas podem ser aproximadas a uma partícula esférica e podem assim ser resolvidas por um método Lagrangiano. A vantagem de um método Lagrangiano para o VoF é que a potência computacional é muito menor e o tempo de cálculo diminui significativamente. Referimo-nos a este modelo como EHD-VoF-LPT, uma vez que é a junção do modelo EHD com o método VoF e depois o acoplamento com o modelo LPT. </p>
-									<p>Nas nossas investigações, apresentamos um modelo híbrido, a partir de um acoplamento 3D do modelo hidrodinâmico VoF e um de seguimento Lagrangiano de partículas (Heinrich, 2020). A este algoritmo, adicionamos as equações do campo elétrico, a partir da forma reduzida das equações de Maxwell para um campo eletrostático, e o Tensor de Tensões de Maxwell (MST) às equações de momento da equação do campo de escoamento da fase contínua. </p>
+									<h2>4.3. Plume Formation</h2>
+									<p>The numerical simulation of droplets is highly complex when using VoF methods, even with an adaptive mesh refinement approach. This is due to the mesh resolution required to accurately capture the interface. The smallest droplets undergo no significant deformation and have a sphericity close to 1. This means that these droplets can be approximated as spherical particles and therefore resolved using a Lagrangian method. The advantage of a Lagrangian method over VoF is that it requires significantly less computational power and considerably reduces the calculation time. This model is referred to as EHD-VoF-LPT because it combines the EHD model with the VoF method and subsequently couples it with the LPT model.</p>
+									<p>In our investigations, we present a hybrid model based on the three-dimensional coupling of a hydrodynamic VoF model with a Lagrangian particle-tracking model (Heinrich, 2020). The electric-field equations, derived from the reduced form of Maxwell's equations for an electrostatic field, are added to this algorithm. The Maxwell Stress Tensor (MST) is also incorporated into the momentum equations governing the continuous-phase flow field.</p>
 
 								</section>
 
@@ -66,12 +66,12 @@
 					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
 						<div class="row main-row">
 							<div class="col-12">
-								<h4 style="color: #fff;">4.3.1 Formação de plumas</h4>
+								<h4 style="color: #fff;">4.3.1 Plume Formation</h4>
 
 
 								<figure class="image main">
 									<img src="./images/Time_LPT.gif" alt="Descriptive text about the image"  class="images-post-big">
-									<figcaption>Fig 1. Evolução do electrcospray</figcaption>
+									<figcaption>Figure 1. Evolution of the electrospray.</figcaption>
 								  </figure>
 
 							</div>
@@ -85,7 +85,7 @@
 						<div class="row">
 							<div class="col-12">
 								<div id="copyright">
-									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. |  Design baseado em <a href="http://html5up.net">HTML5 UP</a>, licenciado sob <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a> com modificações feitas por S. Cândido.
+									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. | Design based on <a href="http://html5up.net">HTML5 UP</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a>, with modifications made by S. Cândido.
 
 								</div>
 
