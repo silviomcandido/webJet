@@ -162,11 +162,11 @@ input, select, textarea {
 	}
 
 	body {
-		font-size: 13.5pt;
+		font-size: 14.5pt;
 		font-family: sans-serif;
 		background-color: #0c2340;
 		font-family: 'Ubuntu Condensed', sans-serif;
-		color: #878e83;
+		color: #000000;
 		letter-spacing: -1px;
 		text-align: justify;
 		hyphens: auto; /* This will automatically add hyphens where appropriate */
