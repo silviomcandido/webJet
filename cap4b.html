@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license
 	html5up.net/license
 -->
-<html lang="pt">
+<html lang="en">
 	<head>
 		<title>EletroJetFlow</title>
 		<meta charset="utf-8" />
@@ -32,24 +32,24 @@
 
 								<nav id="nav">
 									<a href="index.html">Home</a>
-									<a href="cap1.html">Intro</a>
-									<a href="cap2.html">Fundamentos</a>
-									<a href="cap3.html">Modelação</a>
+									<a href="cap1.html">Introduction</a>
+									<a href="cap2.html">Fundamentals</a>
+									<a href="cap3.html">Modelling</a>
 
 									<div class="dropdown">
 										<a href="cap4.html" class="current-page-item">
-											Desempenho
+											Performance
 										</a>
 
 										<div class="dropdown-content">
-											<a href="cap4a.html">Jatos</a>
+											<a href="cap4a.html">Jets</a>
 											<a href="cap4b.html">Whipping</a>
-											<a href="cap4c.html">Plumas</a>
+											<a href="cap4c.html">Plumes</a>
 										</div>
 									</div>
 
-									<a href="cap5.html">Aplicações</a>
-									<a href="artigos.html">Referências</a>
+									<a href="cap5.html">Applications</a>
+									<a href="artigos.html">References</a>
 								</nav>
 							</header>
 
@@ -66,34 +66,33 @@
 						<div class="col-12">
 
 							<section>
-								<h2>4.2. Instabilidades tridimensionais</h2>
+								<h2>4.2. Three-Dimensional Instabilities</h2>
 
 								<p>
-									Os jatos eletrohidrodinâmicos (EHD) constituem uma
-									tecnologia altamente promissora para a geração de
-									estruturas tridimensionais à microescala e à nanoescala.
-									No entanto, o avanço desta tecnologia é dificultado pela
-									compreensão insuficiente de vários aspetos dos seus
-									mecanismos de escoamento, como o comportamento de
-									<em>bending</em> sob potenciais elétricos mais elevados.
+									Electrohydrodynamic (EHD) jets are a highly promising
+									technology for generating three-dimensional structures
+									at the micro- and nanoscale. However, the advancement of
+									this technology is hindered by an incomplete understanding
+									of several aspects of its flow mechanisms, such as
+									<em>bending</em> behaviour under higher electric potentials.
 								</p>
 
 								<p>
-									Apresenta-se uma simulação numérica totalmente acoplada
-									do escoamento tridimensional de jatos
-									eletrohidrodinâmicos, uma vez que os efeitos não
-									axissimétricos regem grande parte dos regimes EHD.
-									Ao impor valores elevados de capilaridade elétrica,
-									<i>Ca</i><sub>E</sub> &gt; 0,25, são captadas
-									instabilidades radiais que, até então, não tinham sido
-									reproduzidas por outras simulações numéricas.
+									A fully coupled numerical simulation of the
+									three-dimensional flow of electrohydrodynamic jets is
+									presented, since non-axisymmetric effects govern a large
+									part of EHD operating regimes. By imposing high values
+									of the electric capillary number,
+									<i>Ca</i><sub>E</sub> &gt; 0.25, radial instabilities
+									are captured that had not previously been reproduced
+									by other numerical simulations.
 								</p>
 
 								<p>
-									Inicialmente, é efetuada uma comparação com simulações
-									bidimensionais axissimétricas anteriores. Posteriormente,
-									o modelo é validado através da comparação com estudos
-									experimentais do regime de cone-jato de Taylor.
+									Initially, a comparison is performed with previous
+									two-dimensional axisymmetric simulations. Subsequently,
+									the model is validated through comparison with
+									experimental studies of the Taylor cone-jet regime.
 								</p>
 							</section>
 
@@ -106,29 +105,28 @@
 
 						<div class="col-12">
 							<section>
-								<h2>4.2.1. Definição do problema</h2>
+								<h2>4.2.1. Problem Definition</h2>
 
 								<p>
-									O bocal de entrada apresenta um diâmetro interno
-									<i>D</i><sub>i</sub> de 160&nbsp;&micro;m e um diâmetro
-									externo <i>D</i><sub>o</sub> de 260&nbsp;&micro;m.
-									O comprimento do bocal, <i>L</i>, é de
+									The inlet nozzle has an internal diameter
+									<i>D</i><sub>i</sub> of 160&nbsp;&micro;m and an external
+									diameter <i>D</i><sub>o</sub> of 260&nbsp;&micro;m.
+									The nozzle length, <i>L</i>, is
 									300&nbsp;&micro;m.
 								</p>
 
 								<p>
-									Este comprimento assegura um escoamento totalmente
-									desenvolvido na extremidade do bocal e evita a
-									recirculação na entrada. A ponta do bocal encontra-se
-									a uma distância fixa <i>H</i> = 1,5&nbsp;mm do coletor
-									ligado à terra.
+									This length ensures fully developed flow at the nozzle
+									exit and prevents recirculation at the inlet. The nozzle
+									tip is located at a fixed distance
+									<i>H</i> = 1.5&nbsp;mm from the grounded collector.
 								</p>
 
 								<p>
-									Para garantir a precisão dos cálculos, o coletor
-									apresenta um diâmetro <i>D</i><sub>c</sub> =
-									5&nbsp;mm, permitindo que o escoamento se ajuste à sua
-									dinâmica natural sem perturbar significativamente o jato.
+									To ensure calculation accuracy, the collector has a
+									diameter <i>D</i><sub>c</sub> =
+									5&nbsp;mm, allowing the flow to adjust to its natural
+									dynamics without significantly disturbing the jet.
 								</p>
 							</section>
 						</div>
@@ -137,19 +135,19 @@
 							<figure class="image main">
 								<img
 									src="./images/SchemeA.png"
-									alt="Esquema do bocal capilar, do jato líquido e do coletor ligado à terra"
+									alt="Schematic of the capillary nozzle, liquid jet and grounded collector"
 									class="images-post-big"
 								/>
 
 								<figcaption>
-									<strong>Figura 1.</strong>
-									Esquema da montagem física. A parede do bocal capilar
-									encontra-se a um potencial elétrico elevado
-									&Phi; relativamente ao coletor ligado à terra.
-									O detalhe do bocal apresenta os diâmetros interno
-									<i>D</i><sub>i</sub> e externo
-									<i>D</i><sub>o</sub>. A superfície azul representa
-									a interface líquida.
+									<strong>Figure 1.</strong>
+									Schematic of the physical configuration. The wall of the
+									capillary nozzle is maintained at a high electric potential
+									&Phi; relative to the grounded collector.
+									The nozzle detail shows the internal diameter
+									<i>D</i><sub>i</sub> and external diameter
+									<i>D</i><sub>o</sub>. The blue surface represents
+									the liquid interface.
 								</figcaption>
 							</figure>
 						</div>
@@ -162,23 +160,23 @@
 
 						<div class="col-7 col-12-medium">
 							<section>
-								<h2>4.2.2. Efeito do potencial elétrico</h2>
+								<h2>4.2.2. Effect of the Electric Potential</h2>
 
 								<p>
-									O efeito do potencial elétrico é analisado através do
-									número de capilaridade elétrica
-									<i>Ca</i><sub>E</sub>, que representa a razão entre
-									as tensões elétricas e as forças de tensão superficial.
-									À medida que <i>Ca</i><sub>E</sub> aumenta, o jato
-									torna-se mais suscetível a deformações assimétricas e
-									a instabilidades tridimensionais.
+									The effect of the electric potential is analysed using
+									the electric capillary number
+									<i>Ca</i><sub>E</sub>, which represents the ratio between
+									electric stresses and surface-tension forces.
+									As <i>Ca</i><sub>E</sub> increases, the jet becomes
+									more susceptible to asymmetric deformations and
+									three-dimensional instabilities.
 								</p>
 
 								<p>
-									As iso-superfícies do líquido permitem acompanhar a
-									evolução temporal do jato e identificar a transição
-									entre o regime aproximadamente axissimétrico e os
-									regimes caracterizados por oscilações radiais e
+									The liquid iso-surfaces make it possible to track the
+									temporal evolution of the jet and identify the transition
+									between the approximately axisymmetric regime and the
+									regimes characterised by radial oscillations and
 									<em>whipping</em>.
 								</p>
 							</section>
@@ -188,17 +186,17 @@
 							<figure class="image main">
 								<img
 									src="./images/g6177.png"
-									alt="Evolução temporal do jato líquido para diferentes números de capilaridade elétrica"
+									alt="Temporal evolution of the liquid jet for different electric capillary numbers"
 									class="images-post"
 								/>
 
 								<figcaption>
-									<strong>Figura 2.</strong>
-									Visualização da dinâmica completa do jato líquido para
-									valores crescentes de <i>Ca</i><sub>E</sub>.
-									As iso-superfícies são coloridas de acordo com o tempo
-									característico <i>t</i><sub>c</sub>. O intervalo total
-									de sobreposição é de 1,5&nbsp;ms.
+									<strong>Figure 2.</strong>
+									Visualisation of the complete liquid-jet dynamics for
+									increasing values of <i>Ca</i><sub>E</sub>.
+									The iso-surfaces are coloured according to the
+									characteristic time <i>t</i><sub>c</sub>. The total
+									overlap interval is 1.5&nbsp;ms.
 								</figcaption>
 							</figure>
 						</div>
@@ -217,13 +215,13 @@
 							<div id="copyright">
 								&copy; 2019&ndash;2023 S. Cândido &amp; UBI.
 								All rights reserved. |
-								Design baseado em
+								Design based on
 								<a href="https://html5up.net">HTML5 UP</a>,
-								licenciado sob
+								licensed under
 								<a href="https://creativecommons.org/licenses/by/3.0/">
 									CC BY 3.0
 								</a>,
-								com modificações realizadas por S. Cândido.
+								with modifications made by S. Cândido.
 							</div>
 
 						</div>
