@@ -58,350 +58,272 @@
 				</div>
 			</div>
 
-			<!-- Main -->
-			<div id="main">
+<!-- Main -->
+<div id="main">
 
-				<!-- Introduction -->
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-12">
+	<!-- Introduction -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
 
-							<section>
-								<h2>4.2. Three-Dimensional Instabilities</h2>
+				<section>
+					<h2>4.2. Three-Dimensional Instabilities</h2>
 
-								<p>
-									Electrohydrodynamic (EHD) jets can operate in a wide range
-									of regimes, from stable axisymmetric cone-jets to strongly
-									unsteady bending and whipping motions. These behaviours
-									result from the competition between electric stresses,
-									surface tension, inertia and viscosity.
-								</p>
+					<p>
+						Electrohydrodynamic jets may transition from a stable,
+						approximately axisymmetric cone-jet to asymmetric droplet
+						emission, lateral oscillations and whipping as the applied
+						electric potential increases.
+					</p>
 
-								<p>
-									At moderate electric forcing, the liquid meniscus and the
-									emitted jet remain approximately aligned with the capillary
-									axis. As the electric potential increases, small lateral
-									perturbations may grow, causing the jet centreline to move
-									away from the axis. The jet can then develop oscillatory
-									bending and, under sufficiently strong forcing, a
-									three-dimensional whipping trajectory.
-								</p>
+					<p>
+						These effects cannot be captured by an axisymmetric model,
+						which constrains the jet centreline to remain aligned with
+						the capillary axis. Fully three-dimensional simulations are
+						therefore required to resolve the radial motion and its
+						temporal development.
+					</p>
 
-								<p>
-									These instabilities cannot be reproduced with a
-									two-dimensional axisymmetric simulation. Axisymmetry
-									constrains the jet centreline to remain on the nozzle axis
-									and suppresses all azimuthal disturbances. A fully
-									three-dimensional calculation is therefore required to
-									predict the direction, amplitude and temporal evolution of
-									the lateral motion.
-								</p>
-
-								<p>
-									This section investigates the transition from an
-									approximately axisymmetric cone-jet to non-axisymmetric
-									oscillations using the numerical methodology described in
-									the <a href="cap3.html">Modelling chapter</a>. The analysis
-									focuses on the effect of the electric capillary number,
-									<i>Ca</i><sub>E</sub>, and on the physical mechanisms
-									responsible for the onset of whipping.
-								</p>
-
-								<p>
-									For the geometry, fluid properties, flow conditions and
-									electrical boundary conditions considered here, sustained
-									three-dimensional motion is observed for
-									<i>Ca</i><sub>E</sub> greater than approximately 0.25.
-									This value should be interpreted as specific to the present
-									configuration rather than as a universal instability
-									threshold.
-								</p>
-							</section>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Problem definition -->
-				<div class="container">
-					<div class="row main-row">
-
-						<div class="col-12">
-							<section>
-								<h2>4.2.1. Problem Definition</h2>
-
-								<p>
-									The computational configuration consists of a metallic
-									capillary facing a grounded collector. The capillary has an
-									internal diameter
-									<i>D</i><sub>i</sub> = 160&nbsp;&micro;m, an external
-									diameter
-									<i>D</i><sub>o</sub> = 260&nbsp;&micro;m and a modelled
-									length
-									<i>L</i> = 300&nbsp;&micro;m.
-								</p>
-
-								<p>
-									The capillary tip is positioned at a distance
-									<i>H</i> = 1.5&nbsp;mm from the collector. The collector
-									has a diameter
-									<i>D</i><sub>c</sub> = 5&nbsp;mm, sufficiently larger
-									than the characteristic jet diameter to minimise the
-									influence of its lateral edge on the jet dynamics.
-								</p>
-
-								<p>
-									Liquid is supplied through the capillary using a prescribed
-									inlet condition, while the surrounding gas is initially at
-									rest. The capillary is maintained at an electric potential
-									&Phi; and the collector is grounded. The resulting electric
-									field deforms the liquid interface, forms the Taylor cone
-									and accelerates the emitted jet towards the collector.
-								</p>
-
-								<p>
-									The lateral dimensions of the domain are selected to reduce
-									the influence of the outer boundaries on the electric field
-									and on the gas-phase flow surrounding the jet.
-								</p>
-
-								<p>
-									Because the modelled capillary length is relatively short,
-									the inlet profile is prescribed consistently with the
-									internal capillary flow rather than assuming that a uniform
-									profile becomes fully developed within the simulated
-									length.
-								</p>
-							</section>
-						</div>
-
-						<div class="col-12">
-							<figure class="image main">
-								<img
-									src="./images/SchemeA.png"
-									alt="Schematic of the capillary nozzle, liquid jet and grounded collector"
-									class="images-post-big"
-								/>
-
-								<figcaption>
-									<strong>Figure 1.</strong>
-									Physical configuration used for the three-dimensional
-									cone-jet simulations. The capillary is maintained at an
-									electric potential &Phi;, while the downstream collector is
-									grounded. The geometry is defined by the internal diameter
-									<i>D</i><sub>i</sub>, external diameter
-									<i>D</i><sub>o</sub>, capillary length <i>L</i> and
-									capillary-to-collector distance <i>H</i>. The blue surface
-									represents the instantaneous liquid-gas interface.
-								</figcaption>
-							</figure>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- Effect of electric potential -->
-				<div class="container">
-					<div class="row main-row">
-
-						<div class="col-7 col-12-medium">
-							<section>
-								<h2>4.2.2. Effect of the Electric Potential</h2>
-
-								<p>
-									The effect of the electric forcing is characterised by the
-									electric capillary number,
-									<i>Ca</i><sub>E</sub>, which compares electric stresses
-									with the restoring stresses associated with surface
-									tension.
-								</p>
-
-								<p>
-									At low values of <i>Ca</i><sub>E</sub>, capillary forces
-									are sufficiently strong to suppress lateral disturbances.
-									The meniscus and the emitted jet therefore remain
-									approximately axisymmetric, apart from small transient
-									oscillations.
-								</p>
-
-								<p>
-									As <i>Ca</i><sub>E</sub> increases, the electric stresses
-									acting on the liquid interface become stronger. The
-									meniscus is further elongated and the emitted jet becomes
-									more sensitive to small asymmetric perturbations.
-								</p>
-
-								<p>
-									Above the stability limit, the jet centreline begins to
-									oscillate laterally. The displacement grows with time and
-									the jet evolves towards a fully three-dimensional bending
-									or whipping motion. The direction of this displacement is
-									not prescribed, but develops naturally from the numerical
-									solution.
-								</p>
-
-								<p>
-									Figure 2 shows successive liquid-interface iso-surfaces
-									over a total interval of 1.5&nbsp;ms. When the surfaces
-									remain closely grouped, the jet is stable or only weakly
-									oscillatory. A wider trajectory envelope indicates the
-									growth of non-axisymmetric motion.
-								</p>
-							</section>
-						</div>
-
-						<div class="col-5 col-12-medium">
-							<figure class="image main">
-								<img
-									src="./images/g6177.png"
-									alt="Temporal evolution of the liquid jet for different electric capillary numbers"
-									class="images-post"
-								/>
-
-								<figcaption>
-									<strong>Figure 2.</strong>
-									Temporal evolution of the liquid-gas interface for
-									increasing values of
-									<i>Ca</i><sub>E</sub>. Successive iso-surfaces are
-									superimposed over a total interval of 1.5&nbsp;ms and
-									coloured according to time. The widening of the trajectory
-									envelope indicates the amplification of lateral
-									perturbations and the transition from an approximately
-									axisymmetric jet to whipping.
-								</figcaption>
-							</figure>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- Physical interpretation -->
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-12">
-
-							<section>
-								<h2>4.2.3. Physical Interpretation</h2>
-
-								<p>
-									The instability results from the competition between
-									destabilising electric stresses and restoring capillary and
-									viscous stresses. Surface tension tends to maintain a
-									straight and compact jet by reducing the liquid-gas
-									interfacial area, while viscosity dissipates the energy
-									associated with lateral motion.
-								</p>
-
-								<p>
-									When the jet is displaced laterally, the electric field
-									around it becomes asymmetric. This asymmetry produces an
-									unbalanced electric traction on the liquid interface. If
-									the electric forcing is sufficiently strong, the resulting
-									traction amplifies the initial displacement rather than
-									restoring the jet towards the axis.
-								</p>
-
-								<p>
-									This creates a feedback mechanism: a small lateral
-									displacement modifies the electric field, the modified
-									field produces an asymmetric electric stress, and that
-									stress generates a further displacement.
-								</p>
-
-								<p>
-									The three-dimensional formulation is essential because the
-									orientation of the lateral motion is not known in advance.
-									An axisymmetric model only admits the axisymmetric mode and
-									therefore cannot reproduce bending or whipping, regardless
-									of the magnitude of the applied voltage.
-								</p>
-							</section>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Quantitative assessment -->
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-12">
-
-							<section>
-								<h2>4.2.4. Characterisation of the Instability</h2>
-
-								<p>
-									The onset of instability can be assessed by tracking the
-									jet centreline as a function of time. Relevant quantities
-									include the maximum radial displacement, oscillation
-									amplitude, dominant frequency and temporal growth rate.
-								</p>
-
-								<p>
-									These quantities provide a more objective criterion than
-									visual inspection alone. A stable jet presents a bounded
-									and weak centreline displacement, while an unstable jet
-									exhibits a growing lateral amplitude or a sustained
-									three-dimensional trajectory.
-								</p>
-
-								<p>
-									The three-dimensional results are first compared with the
-									corresponding axisymmetric simulations in the stable regime.
-									The model is then assessed against published experimental
-									observations of Taylor cone-jets, including the cone shape,
-									jet behaviour and transition to lateral motion.
-								</p>
-							</section>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Numerical reliability -->
-				<div class="container">
-					<div class="row main-row">
-						<div class="col-12">
-
-							<section>
-								<h2>4.2.5. Numerical Reliability</h2>
-
-								<p>
-									The predicted instability threshold is sensitive to the
-									spatial and temporal resolution. The mesh must resolve the
-									thin emitted jet, the interface curvature and the strong
-									electric-field gradients near the capillary tip.
-								</p>
-
-								<p>
-									Insufficient resolution may artificially damp the
-									instability or alter the jet diameter. Conversely,
-									numerical disturbances associated with the interface
-									reconstruction may act as an initial perturbation and
-									trigger lateral motion.
-								</p>
-
-								<p>
-									The critical value of <i>Ca</i><sub>E</sub> should
-									therefore be interpreted together with mesh- and
-									time-step-sensitivity studies. Suitable convergence
-									indicators include the mean jet diameter, cone shape,
-									maximum centreline displacement and oscillation frequency.
-								</p>
-
-								<p>
-									Within these numerical limitations, the three-dimensional
-									model captures physical behaviour that is fundamentally
-									inaccessible to an axisymmetric formulation and provides a
-									direct description of the transition from a stable
-									cone-jet to bending and whipping.
-								</p>
-							</section>
-
-						</div>
-					</div>
-				</div>
+					<p>
+						The simulations presented here use the numerical methodology
+						described in the
+						<a href="cap3.html">Modelling chapter</a>.
+					</p>
+				</section>
 
 			</div>
+		</div>
+	</div>
+
+	<!-- Problem definition -->
+	<div class="container">
+		<div class="row main-row">
+
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.2.1. Problem Definition</h2>
+
+					<p>
+						The configuration consists of a metallic capillary facing
+						a grounded collector. The capillary has an internal diameter
+						<i>D</i><sub>i</sub> = 160&nbsp;&micro;m, an external
+						diameter <i>D</i><sub>o</sub> = 260&nbsp;&micro;m and
+						a length <i>L</i> = 300&nbsp;&micro;m.
+					</p>
+
+					<p>
+						The capillary tip is positioned
+						<i>H</i> = 1.5&nbsp;mm from a collector with diameter
+						<i>D</i><sub>c</sub> = 5&nbsp;mm. The capillary is
+						maintained at a potential <i>U</i><sub>0</sub>, while
+						the collector is grounded.
+					</p>
+
+					<p>
+						The electric field deforms the liquid interface and drives
+						the formation of the Taylor cone and the emitted jet.
+					</p>
+				</section>
+			</div>
+
+			<div class="col-5 col-12-medium">
+				<figure class="image main">
+					<img
+						src="./images/SchemeA.png"
+						alt="Capillary, electrohydrodynamic jet and grounded collector"
+						class="images-post"
+					/>
+
+					<figcaption>
+						<strong>Figure 1.</strong>
+						Physical configuration of the three-dimensional simulations.
+						The capillary is maintained at potential
+						<i>U</i><sub>0</sub>, while the collector is grounded.
+						The blue surface represents the liquid-gas interface.
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Electric capillary number -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
+
+				<section>
+					<h2>4.2.2. Electric Capillary Number</h2>
+
+					<p>
+						The intensity of the electric forcing relative to surface
+						tension is characterised by the electric capillary number:
+					</p>
+
+					<div class="equation">
+						\[
+						Ca_E =
+						\frac{\varepsilon_0 D_i E_0^2}{\gamma},
+						\qquad
+						E_0 =
+						\frac{U_0}
+						{D_o \ln\left(4H/D_o\right)}.
+						\]
+					</div>
+
+					<p>
+						Here, \(\varepsilon_0\) is the vacuum permittivity,
+						\(D_i\) and \(D_o\) are the internal and external capillary
+						diameters, \(E_0\) is the characteristic electric field,
+						\(U_0\) is the applied potential, \(H\) is the
+						capillary-to-collector distance and \(\gamma\) is the
+						surface-tension coefficient.
+					</p>
+
+					<p>
+						At low <i>Ca</i><sub>E</sub>, surface tension suppresses
+						lateral disturbances. As <i>Ca</i><sub>E</sub> increases,
+						electric stresses become sufficiently strong to amplify
+						non-axisymmetric perturbations.
+					</p>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Whipping propagation -->
+	<div class="container">
+		<div class="row main-row">
+
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.2.3. Whipping Dynamics</h2>
+
+					<p>
+						A small lateral displacement changes the electric-field
+						distribution around the jet. The resulting asymmetric
+						electric stresses further displace the liquid, creating a
+						feedback mechanism that amplifies the initial perturbation.
+					</p>
+
+					<p>
+						The disturbance propagates along the jet towards the
+						collector. Its amplitude increases as electric stresses
+						overcome the stabilising effects of surface tension and
+						viscosity, producing the characteristic whipping trajectory.
+					</p>
+				</section>
+			</div>
+
+			<div class="col-5 col-12-medium">
+				<figure class="image main">
+					<img
+						src="./images/whip.png"
+						alt="Propagation of a lateral wave along an electrohydrodynamic jet"
+						class="images-post"
+					/>
+
+					<figcaption>
+						<strong>Figure 2.</strong>
+						Propagation of a lateral disturbance along the jet.
+						The wave travels towards the collector while its radial
+						amplitude increases.
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Transition between regimes -->
+	<div class="container">
+		<div class="row main-row">
+
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.2.4. Transition Between Regimes</h2>
+
+					<p>
+						At <i>Ca</i><sub>E</sub> = 0.25, the jet presents a
+						relatively stable single-droplet emission. A small increase
+						to <i>Ca</i><sub>E</sub> = 0.26 produces asymmetric
+						satellite droplets and intermittent lateral motion.
+					</p>
+
+					<p>
+						For larger values, including
+						<i>Ca</i><sub>E</sub> = 0.32, 0.38 and 0.42, the jet
+						develops increasingly pronounced radial instabilities.
+						At the highest forcing, the jet remains continuously
+						connected to the collector and develops a clear whipping
+						motion.
+					</p>
+
+					<p>
+						The critical value is not universal: it depends on the
+						geometry, flow rate, fluid properties and electrical
+						boundary conditions.
+					</p>
+				</section>
+			</div>
+
+			<div class="col-5 col-12-medium">
+				<figure class="image main">
+					<img
+						src="./images/g6177.png"
+						alt="Temporal evolution of the jet for increasing electric capillary number"
+						class="images-post"
+					/>
+
+					<figcaption>
+						<strong>Figure 3.</strong>
+						Successive liquid-interface positions for increasing
+						<i>Ca</i><sub>E</sub>, superimposed over a total interval
+						of 1.5&nbsp;ms. The widening envelope indicates the
+						transition from a nearly axisymmetric jet to whipping.
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Further reading -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
+
+				<section>
+					<h2>Further Reading</h2>
+
+					<p>
+						A detailed description of the three-dimensional model,
+						validation, electric-charge transport, satellite-droplet
+						formation and whipping dynamics is available in:
+					</p>
+
+					<p>
+						S. Cândido and J. C. Páscoa,
+						“Dynamics of three-dimensional electrohydrodynamic
+						instabilities on Taylor cone jets using a numerical
+						approach,”
+						<em>Physics of Fluids</em>, vol. 35, 052110, 2023.
+						<a
+							href="https://doi.org/10.1063/5.0151109"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View publication
+						</a>.
+					</p>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+</div>
 
 			<!-- Page navigation -->
 			<div class="container">
