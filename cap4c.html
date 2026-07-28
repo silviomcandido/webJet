@@ -2,117 +2,399 @@
 <!--
 	Minimaxing by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Free for personal and commercial use under the CCA 3.0 license
+	html5up.net/license
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>EletroJetFlow</title>
+		<title>Electrospray Plume Formation | EletroJetFlow</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+
 	<body>
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
+			<div id="header-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
 
-								<header id="header">
-									<h1><a href="index.html" id="logo">EletroJetFlow </a></h1>
-									<nav id="nav">
-										<a href="index.html" >Home</a>
-										<a href="cap1.html" >Introduction</a>
-										<a href="cap2.html" >Fundamentals</a>
-										<a href="cap3.html">Modelling</a>
-										<div class="dropdown">
-											<a href="cap4.html" class="current-page-item">Performance</a>
-											<div class="dropdown-content">
-												<a href="cap4a.html">Jets</a>
-												<a href="cap4b.html">Whipping</a>
-												<a href="cap4c.html">Plumes</a>
-											</div>
+							<header id="header">
+								<h1>
+									<a href="index.html" id="logo">EletroJetFlow</a>
+								</h1>
+
+								<nav id="nav">
+									<a href="index.html">Home</a>
+									<a href="cap1.html">Introduction</a>
+									<a href="cap2.html">Fundamentals</a>
+									<a href="cap3.html">Modelling</a>
+
+									<div class="dropdown">
+										<a href="cap4.html" class="current-page-item">
+											Performance
+										</a>
+
+										<div class="dropdown-content">
+											<a href="cap4a.html">Jets</a>
+											<a href="cap4b.html">Whipping</a>
+											<a href="cap4c.html">Plumes</a>
 										</div>
-										<a href="cap5.html">Applications</a>
-										<a href="artigos.html">References</a>
-									</nav>
-								</header>
+									</div>
 
-							</div>
+									<a href="cap5.html">Applications</a>
+									<a href="artigos.html">References</a>
+								</nav>
+							</header>
+
 						</div>
 					</div>
 				</div>
+			</div>
 
 			<!-- Main -->
-				<div id="main">
-					<div class="container">
-						<div class="row main-row">
-							<div class="col-12">
+			<div id="main">
 
-								<section>
-									<h2>4.3. Plume Formation</h2>
-									<p>The numerical simulation of droplets is highly complex when using VoF methods, even with an adaptive mesh refinement approach. This is due to the mesh resolution required to accurately capture the interface. The smallest droplets undergo no significant deformation and have a sphericity close to 1. This means that these droplets can be approximated as spherical particles and therefore resolved using a Lagrangian method. The advantage of a Lagrangian method over VoF is that it requires significantly less computational power and considerably reduces the calculation time. This model is referred to as EHD-VoF-LPT because it combines the EHD model with the VoF method and subsequently couples it with the LPT model.</p>
-									<p>In our investigations, we present a hybrid model based on the three-dimensional coupling of a hydrodynamic VoF model with a Lagrangian particle-tracking model (Heinrich, 2020). The electric-field equations, derived from the reduced form of Maxwell's equations for an electrostatic field, are added to this algorithm. The Maxwell Stress Tensor (MST) is also incorporated into the momentum equations governing the continuous-phase flow field.</p>
+				<!-- Introduction -->
+				<div class="container">
+					<div class="row main-row">
+						<div class="col-12">
 
-								</section>
+							<section>
+								<h2>4.3. Electrospray Plume Formation</h2>
 
-							</div>
-						</div>
-						
-					</div>
+								<p>
+									Electrospray atomisation involves several widely separated
+									length scales. The Taylor cone and continuous liquid jet
+									must be resolved as deformable interfaces, whereas the
+									diameter of the emitted droplets may be more than two orders
+									of magnitude smaller than the overall spray domain.
+								</p>
 
-					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
-						<div class="row main-row">
-							<div class="col-12">
-								<h4 style="color: #fff;">4.3.1 Plume Formation</h4>
+								<p>
+									Resolving the complete plume using only a
+									Volume-of-Fluid method would therefore require a very fine
+									mesh throughout the domain. Instead, the present
+									EHD-VoF-LPT approach combines interface-resolved simulation
+									with Lagrangian particle tracking.
+								</p>
 
+								<p>
+									The VoF model resolves the Taylor cone, the continuous jet
+									and its primary breakup. Once detached droplets become
+									sufficiently small, nearly spherical and electrically
+									stable, they are converted into Lagrangian parcels and
+									tracked through the spray plume.
+								</p>
+							</section>
 
-								<figure class="image main">
-									<img src="./images/Time_LPT.gif" alt="Descriptive text about the image"  class="images-post-big">
-									<figcaption>Figure 1. Evolution of the electrospray.</figcaption>
-								  </figure>
-
-							</div>
 						</div>
 					</div>
 				</div>
-<div class="container">
-	<div class="page-arrows">
 
-		<a href="cap4.html"
-		   class="page-arrow page-arrow-prev"
-		   aria-label="Previous"
-		   title="Previous">
-			&#8592;
-		</a>
+				<!-- Hybrid method -->
+				<div class="container">
+					<div class="row main-row">
 
-	</div>
-</div>
-				<!-- Footer -->
-				<div class="footer-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div id="copyright">
-									&copy; 2019-2023 S. Cândido & UBI. All rights reserved. | Design based on <a href="http://html5up.net">HTML5 UP</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">[CC BY 3.0]</a>, with modifications made by S. Cândido.
+						<div class="col-7 col-12-medium">
+							<section>
+								<h2>4.3.1. Hybrid EHD-VoF-LPT Approach</h2>
 
+								<p>
+									The Eulerian VoF region describes the two-phase liquid-gas
+									flow, including surface tension, electric-charge transport
+									and the electric forces obtained from the Maxwell stress
+									tensor.
+								</p>
+
+								<p>
+									Detached liquid structures are identified from the phase
+									fraction field. Their volume, equivalent diameter,
+									centre-of-mass position, velocity and electric charge are
+									calculated before conversion.
+								</p>
+
+								<p>
+									A droplet is converted only when it satisfies three main
+									conditions:
+								</p>
+
+								<ol>
+									<li>
+										its diameter is smaller than a prescribed maximum;
+									</li>
+									<li>
+										its shape is sufficiently close to spherical;
+									</li>
+									<li>
+										its electric charge remains below the Rayleigh limit.
+									</li>
+								</ol>
+
+								<p>
+									Droplets that remain strongly deformed or electrically
+									unstable continue to be resolved with VoF.
+								</p>
+							</section>
+						</div>
+
+						<div class="col-5 col-12-medium">
+							<figure class="image main">
+								<img
+									src="./images/eJet_Breakup.gif"
+									alt="Transient conversion of VoF droplets into Lagrangian parcels"
+									class="images-post"
+								/>
+
+								<figcaption>
+									<strong>Figure 1.</strong>
+									Transient coupling between the VoF and LPT descriptions.
+									The Taylor cone, continuous jet and deforming droplets are
+									resolved with VoF. Valid detached droplets are removed from
+									the Eulerian liquid field and introduced as Lagrangian
+									parcels. The arrows indicate their subsequent trajectories.
+								</figcaption>
+							</figure>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Conversion criteria -->
+				<div class="container">
+					<div class="row main-row">
+						<div class="col-12">
+
+							<section>
+								<h2>4.3.2. Droplet-to-Particle Conversion</h2>
+
+								<p>
+									The equivalent droplet diameter is calculated from its
+									resolved liquid volume:
+								</p>
+
+								<div class="equation">
+									\[
+									d_p =
+									\left(
+									\frac{6V_p}{\pi}
+									\right)^{1/3},
+									\]
 								</div>
 
-							</div>
+								<p>
+									where \(V_p\) is the volume of the detached liquid
+									structure. A geometric criterion is used to prevent highly
+									deformed droplets from being represented as point particles.
+								</p>
+
+								<p>
+									The electric charge is also checked against the Rayleigh
+									limit:
+								</p>
+
+								<div class="equation">
+									\[
+									q_R =
+									\left(
+									8\pi \varepsilon_0 \gamma d_p^3
+									\right)^{1/2}.
+									\]
+								</div>
+
+								<p>
+									Here, \(q_R\) is the maximum stable charge,
+									\(\varepsilon_0\) is the vacuum permittivity,
+									\(\gamma\) is the surface-tension coefficient and
+									\(d_p\) is the droplet diameter. If the droplet charge
+									exceeds this limit, electrostatic repulsion can overcome
+									surface tension and the droplet must remain interface
+									resolved.
+								</p>
+							</section>
+
 						</div>
 					</div>
 				</div>
 
-	</div>
+				<!-- Lagrangian plume -->
+				<div class="container">
+					<div class="row main-row">
+
+						<div class="col-7 col-12-medium">
+							<section>
+								<h2>4.3.3. Lagrangian Plume Dynamics</h2>
+
+								<p>
+									After conversion, the droplets are tracked as charged
+									Lagrangian parcels. Their trajectory is obtained from the
+									balance of aerodynamic, gravitational and electrostatic
+									forces:
+								</p>
+
+								<div class="equation">
+									\[
+									m_p
+									\frac{d\mathbf{u}_p}{dt}
+									=
+									\mathbf{F}_D
+									+
+									\mathbf{F}_G
+									+
+									\mathbf{F}_E.
+									\]
+								</div>
+
+								<p>
+									The electric contribution is
+								</p>
+
+								<div class="equation">
+									\[
+									\mathbf{F}_E = q_p\mathbf{E},
+									\]
+								</div>
+
+								<p>
+									where \(m_p\), \(\mathbf{u}_p\) and \(q_p\) are the
+									parcel mass, velocity and electric charge, and
+									\(\mathbf{E}\) is the local electric field.
+								</p>
+
+								<p>
+									The axial electric field accelerates the droplets towards
+									the collector, while mutual electrostatic repulsion and
+									radial field components promote the expansion of the plume.
+									Aerodynamic drag opposes the relative motion between the
+									droplets and the surrounding gas.
+								</p>
+							</section>
+						</div>
+
+						<div class="col-5 col-12-medium">
+							<figure class="image main">
+								<img
+									src="./images/Plume_eJet.gif"
+									alt="Time-averaged electrospray plume formed by Lagrangian droplets"
+									class="images-post"
+								/>
+
+								<figcaption>
+									<strong>Figure 2.</strong>
+									Time-averaged electrospray plume obtained from the
+									Lagrangian parcels. The distribution represents the
+									combined effect of axial electric acceleration,
+									aerodynamic drag and radial Coulombic expansion.
+								</figcaption>
+							</figure>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Multiscale interpretation -->
+				<div class="container">
+					<div class="row main-row">
+						<div class="col-12">
+
+							<section>
+								<h2>4.3.4. Multiscale Electrospray Simulation</h2>
+
+								<p>
+									The hybrid formulation provides a continuous description
+									of the atomisation process across the main electrospray
+									regions:
+								</p>
+
+								<ol>
+									<li>Taylor cone formation;</li>
+									<li>continuous liquid-jet development;</li>
+									<li>primary breakup into charged droplets;</li>
+									<li>VoF-to-LPT conversion;</li>
+									<li>transport and expansion of the spray plume.</li>
+								</ol>
+
+								<p>
+									The main advantage is that interface resolution is retained
+									where liquid deformation and breakup are important, while
+									the much less expensive Lagrangian description is used for
+									the large population of small droplets in the far plume.
+								</p>
+							</section>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Page navigation -->
+			<div class="container">
+				<div class="page-arrows">
+
+					<a
+						href="cap4b.html"
+						class="page-arrow page-arrow-prev"
+						aria-label="Previous page: Three-Dimensional Instabilities"
+						title="Previous: Whipping"
+					>
+						&#8592;
+					</a>
+
+					<a
+						href="cap5.html"
+						class="page-arrow page-arrow-next"
+						aria-label="Next page: Applications"
+						title="Next: Applications"
+					>
+						&#8594;
+					</a>
+
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+
+							<div id="copyright">
+								&copy; 2019&ndash;2023 S. Cândido &amp; UBI.
+								All rights reserved. |
+								Design based on
+								<a href="https://html5up.net">HTML5 UP</a>,
+								licensed under
+								<a href="https://creativecommons.org/licenses/by/3.0/">
+									CC BY 3.0
+								</a>,
+								with modifications made by S. Cândido.
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+			async>
+		</script>
 
 	</body>
 </html>
