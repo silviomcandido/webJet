@@ -27,33 +27,21 @@ section, summary, time, mark, audio, video {
 .page-arrows {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	margin: 2em 0 3em 0;
-	padding-top: 1.5em;
-	border-top: solid 1px #d7d7d7;
+	margin: 1em 0 2em 0;
 }
 
-.page-arrow {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 55px;
-	height: 55px;
-	border-radius: 50%;
-	background: #ed391b;
-	color: #fff;
-	font-size: 2em;
-	font-weight: bold;
-	line-height: 1;
+.simple-arrow {
+	color: white;
+	font-size: 3em;
 	text-decoration: none;
-	transition: transform 0.2s ease, opacity 0.2s ease;
+	line-height: 1;
 }
 
-.page-arrow:hover {
-	transform: scale(1.08);
-	opacity: 0.85;
-	color: #fff;
-}	
+.simple-arrow:hover {
+	color: white;
+	opacity: 0.7;
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
