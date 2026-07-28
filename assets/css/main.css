@@ -27,19 +27,36 @@ section, summary, time, mark, audio, video {
 .page-arrows {
 	display: flex;
 	justify-content: space-between;
-	margin: 1em 0 2em 0;
+	align-items: center;
+	margin: 1em 0 3em 0;
+	padding-top: 1.5em;
+	border-top: solid 1px #d7d7d7;
 }
 
-.simple-arrow {
-	color: white;
-	font-size: 3em;
-	text-decoration: none;
+.page-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: #ed391b;
+	color: #ffffff;
+	font-size: 2em;
+	font-weight: bold;
 	line-height: 1;
+	text-decoration: none;
+	transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.simple-arrow:hover {
-	color: white;
-	opacity: 0.7;
+.page-arrow:hover {
+	color: #ffffff;
+	opacity: 0.85;
+	transform: scale(1.08);
+}
+
+.page-arrow:visited {
+	color: #ffffff;
 }
 
 
