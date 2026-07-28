@@ -45,86 +45,302 @@
 					</div>
 				</div>
 
-			<!-- Main -->
-				<div id="main">
-					<div class="container">
-						<div class="row main-row">
-							<div class="col-12">
+<!-- Main -->
+<div id="main">
 
-								<section>
-									<h2>4.1. Axisymmetric Jets</h2>
-									<p>The initial studies in this work focus on electrohydrodynamic jets that are radially stable. This means that the objective is to calculate the flow of axisymmetric Taylor cone-jets. This type of jet forms when the inlet flow-rate conditions and the applied electric potential lie within a radially stable operating window. Therefore, the only liquid-jet instability considered is caused by surface tension rather than bending. In this context, the axisymmetric jet case refers to the computational modelling of the experimental tests reported in [30], whose exact operating conditions are reproduced numerically. This case was selected because it enables validation of the electrohydrodynamic model for jet breakup through direct comparison with scaling laws for the diameter of the generated droplets. The following figure shows a jet under these specific conditions. An axisymmetric jet has the characteristic shape shown in the figure.</p>
-										
-								</section>
-								<br>
+	<!-- Introduction -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
 
+				<section>
+					<h2>4.1. Axisymmetric Jets</h2>
 
-							</div>
-						</div>
+					<p>
+						This study considers a stable, axisymmetric Taylor cone-jet
+						in which the liquid remains centred on the nozzle axis.
+						Three-dimensional bending and whipping are therefore excluded,
+						allowing the primary breakup of the continuous jet into
+						charged droplets to be investigated.
+					</p>
+
+					<p>
+						The operating conditions reproduce experimental tests of a
+						conductive heptane solution. The numerical model resolves the
+						Taylor cone, the steady liquid jet, the growth of an
+						axisymmetric capillary wave and the subsequent emission of
+						droplets.
+					</p>
+
+					<p>
+						The axisymmetric assumption is appropriate within the stable
+						emission window, where the dominant instability is a
+						<em>varicose</em> disturbance: the jet diameter oscillates
+						along its axis without lateral displacement of the centreline.
+					</p>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Physical configuration -->
+	<div class="container">
+		<div class="row main-row">
+
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.1.1. Taylor Cone-Jet and Primary Breakup</h2>
+
+					<p>
+						Liquid enters through a capillary maintained at an electric
+						potential of 4&nbsp;kV and is accelerated towards a grounded
+						collector. The imposed electric stresses elongate the
+						meniscus and form a thin jet whose diameter is much smaller
+						than the capillary diameter.
+					</p>
+
+					<p>
+						Downstream of the steady jet, an axisymmetric wave develops.
+						The alternating contraction and expansion of the interface
+						produces nodes and antinodes, with a characteristic
+						wavelength \(2\Lambda\). As the wave amplitude grows, the
+						liquid necks and separates into droplets.
+					</p>
+
+					<p>
+						Electric charge is concentrated at the liquid-gas interface
+						and reaches larger values near the wave antinodes. The
+						transport of charge is therefore directly coupled to the
+						dynamics of the breakup process.
+					</p>
+				</section>
+			</div>
+
+			<div class="col-5 col-12-medium">
+				<figure class="image main">
+					<img
+						src="./images/axisEJET.png"
+						alt="Axisymmetric Taylor cone-jet, electric charge distribution and primary breakup"
+						class="images-post"
+					/>
+
+					<figcaption>
+						<strong>Figure 1.</strong>
+						Axisymmetric Taylor cone-jet and primary breakup. The
+						enlarged views show the axial velocity and surrounding flow,
+						together with the electric-charge distribution along the
+						wave-like jet. Charge accumulates near the antinodes of the
+						interface disturbance.
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Interactive fields -->
+	<div class="container">
+		<div class="row main-row">
+
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.1.2. EHD Flow Fields</h2>
+
+					<p>
+						The interactive visualisation presents the main scalar and
+						vector fields at the first droplet emission. The operating
+						conditions are an inlet flow rate of 5&nbsp;nL/s and an
+						applied potential of 4&nbsp;kV.
+					</p>
+
+					<p>
+						The phase fraction identifies the liquid-gas interface,
+						while the electric-charge density highlights charge
+						accumulation along the cone and jet. Velocity and
+						electric-field streamlines illustrate the coupling between
+						the fluid motion and electrostatic forcing.
+					</p>
+				</section>
+			</div>
+
+			<div class="col-5 col-12-medium">
+
+				<section>
+					<h2>Field Visualisation</h2>
+
+					<p>
+						Select a scalar field and, optionally, the velocity or
+						electric-field streamlines.
+					</p>
+
+					<div>
+						<label for="fieldSelect">Scalar field:</label>
+						<select id="fieldSelect">
+							<option value="">Select field</option>
+							<option value="alpha">Phase fraction</option>
+							<option value="Ef">Electric-field magnitude</option>
+							<option value="rhoE">Electric-charge density</option>
+							<option value="Ue">Velocity magnitude</option>
+						</select>
+
+						<label for="vectorFieldSelect">Streamlines:</label>
+						<select id="vectorFieldSelect">
+							<option value="">Select vector field</option>
+							<option value="none">None</option>
+							<option value="Ef">Electric field</option>
+							<option value="U">Velocity</option>
+						</select>
 					</div>
-					<div class="container">
-						<div class="row main-row">
-							<div class="col-7 col-12-medium">
 
-								<section>
-									<h2>4.1.1. Visualization of the EHD Flow Fields</h2>
-									<p>Here, it is possible to select a combination of the main fields of the two-phase EHD flow at the instant of the first emission. The results correspond to a flow rate of \( 5 \) nL/s and an applied electric potential of \( 4 \) kV.</p>
-									
+					<img
+						id="selectedImage"
+						src=""
+						alt="Selected electrohydrodynamic field"
+						class="images-post"
+					/>
 
-								</section>
+					<script src="assets/js/script.js"></script>
+				</section>
 
-							</div>
-							<div class="col-5 col-12-medium">
+			</div>
+		</div>
+	</div>
 
-								<section>
-									<h2 >Field visualization:</h2>
+	<!-- Breakup dynamics -->
+	<div class="container">
+		<div class="row main-row">
 
-									<b>Select the combination of scalar and vector fields used to visualize the streamlines.</b>
+			<div class="col-7 col-12-medium">
+				<section>
+					<h2>4.1.3. Breakup and Droplet Emission</h2>
 
-									<div>
-										<label for="fieldSelect">Scalar:</label>
-										<select id="fieldSelect">
-											<option value="">Select Field</option>
-											<option value="alpha">alpha</option>
-											<option value="Ef">Ef</option>
-											<option value="rhoE">rhoE</option>
-											<option value="Ue">Ue</option>
-										</select>
-										<label for="vectorFieldSelect">Streamlines:</label>
-										<select id="vectorFieldSelect">
-											<option value="">Select Vector Field</option>
-											<option value="none">None</option>
-											<option value="Ef">Ef</option>
-											<option value="U">U</option>
-										</select>
-									</div>
-								
-									<img id="selectedImage" src="" alt="Selected Field" class="images-post"/>
+					<p>
+						After the initial transient, the jet reaches a periodic
+						emission regime. Surface tension promotes necking of the
+						thin jet, while electric stresses and charge transport
+						modify the wavelength, frequency and diameter of the
+						emitted droplets.
+					</p>
 
-									<script src="assets/js/script.js"></script>
+					<p>
+						The breakup frequency increases as the inlet flow rate is
+						reduced. Lower flow rates provide less liquid to stabilise
+						the continuous jet, making the interface more sensitive to
+						the electric forcing.
+					</p>
 
-								</section>
+					<p>
+						The numerical droplet diameters were compared with
+						experimental measurements over several flow rates and
+						electric potentials. The mean deviations were approximately
+						1%, demonstrating that the model captures the primary
+						breakup and resulting droplet size accurately.
+					</p>
+				</section>
+			</div>
 
-							</div>
-						</div>
+			<div class="col-5 col-12-medium">
+				<figure class="image main">
+					<img
+						src="./images/TaylorConeModes.gif"
+						alt="Temporal evolution of the axisymmetric jet breakup and droplet emission"
+						class="images-post"
+					/>
+
+					<figcaption>
+						<strong>Figure 2.</strong>
+						Temporal evolution of the axisymmetric cone-jet, showing
+						the growth of the interfacial wave, jet necking and
+						periodic droplet emission.
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Scaling -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
+
+				<section>
+					<h2>4.1.4. Characteristic Scales</h2>
+
+					<p>
+						The inlet flow rate and droplet diameter are expressed
+						using the characteristic electrohydrodynamic scales:
+					</p>
+
+					<div class="equation">
+						\[
+						d_0 =
+						\left(
+						\frac{\gamma \varepsilon_0^2}
+						{\rho \sigma^2}
+						\right)^{1/3},
+						\qquad
+						Q_0 =
+						\frac{\gamma \varepsilon_0}
+						{\rho \sigma}.
+						\]
 					</div>
 
-					<br>
+					<p>
+						Here, \(d_0\) is the characteristic droplet diameter,
+						\(Q_0\) is the characteristic flow rate, \(\gamma\) is
+						the surface-tension coefficient, \(\varepsilon_0\) is
+						the vacuum permittivity, \(\rho\) is the liquid density
+						and \(\sigma\) is its electrical conductivity.
+					</p>
 
-					<div class="container" style="background-color: rgb(0, 0, 0); color: black; padding: 20px; box-shadow: 0px 4px 8px rgba(245, 243, 243, 0.1);">
-						<div class="row main-row">
-							<div class="col-12">
-								<h2 style="color: #fff;">4.1.2 Stability and Operating Conditions</h2>
+					<p>
+						These scales allow the numerical and experimental results
+						to be compared using the normalised quantities
+						\(d/d_0\) and \(Q_i/Q_0\).
+					</p>
+				</section>
 
-								<figure class="image main">
-									<img src="./images/anim_iso.gif" alt="Descriptive text about the image"   class="images-post-big">
-									<figcaption>Figure 1. Description of the figure.</figcaption>
-								  </figure>
+			</div>
+		</div>
+	</div>
 
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- Further reading -->
+	<div class="container">
+		<div class="row main-row">
+			<div class="col-12">
+
+				<section>
+					<h2>Further Reading</h2>
+
+					<p>
+						The complete numerical formulation, validation, spectral
+						analysis and modal decomposition of this axisymmetric
+						cone-jet are presented in:
+					</p>
+
+					<p>
+						S. Cândido and J. C. Páscoa,
+						“On modal decomposition as surrogate for
+						charge-conservative EHD modelling of Taylor cone jets,”
+						<em>International Journal of Engineering Science</em>,
+						vol. 193, 103947, 2023.
+						<a
+							href="https://doi.org/10.1016/j.ijengsci.2023.103947"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							View publication
+						</a>.
+					</p>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+</div>
 
 <!-- Page navigation -->
 <div class="container">
